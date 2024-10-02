@@ -18,3 +18,7 @@ arduino-cli lib install --git-url https://github.com/adamgreg/arduino-nfc.git#88
 arduino-cli config add board_manager.additional_urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 arduino-cli core install rp2040:rp2040@4.0.2
 
+# TODO: Implement renovate auto-update
+#        * arduino-cli download
+#        * arduino libraries
+#        * arduino board manager
