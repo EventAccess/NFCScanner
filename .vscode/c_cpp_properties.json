@@ -4,9 +4,19 @@
             "name": "Linux",
             "includePath": [
                 "${default}",
-                "/home/vscode/Arduino/libraries/Nfc/src/"
+                "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/cores/rp2040/",
+                "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/include/",
+                "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/include/rp2040/",
+                "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/include/rp2040/pico_base/",
+                "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/libraries/*/src/",
+                "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/pico-sdk/lib/lwip/src/include/",
+                "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/pico-sdk/src/common/*/include/",
+                "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/pico-sdk/src/rp2_common/*/include/",
+                "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/pico-sdk/src/rp2040/*/include/",
+                "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/variants/challenger_2040_nfc/",
+                "/home/vscode/Arduino/libraries/*/src/"
             ],
-            "defines": [],
+            "defines": ["PICO_RP2040"],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
             "cppStandard": "gnu++17",

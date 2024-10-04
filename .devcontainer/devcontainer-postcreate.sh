@@ -1,6 +1,4 @@
 #!/bin/bash
-apt update
-apt install python3
 
 pushd /tmp
     rm -f arduino-cli_*.tar.gz
@@ -13,7 +11,10 @@ popd
 
 arduino-cli config set library.enable_unsafe_install true
 
+arduino-cli lib update-index
+
 arduino-cli lib install --git-url https://github.com/adamgreg/arduino-nfc.git#88d07446367bb75a5e3bf5fad5ab409e754640d9
+arduino-cli lib install Ethernet@2.0.2
 
 arduino-cli config add board_manager.additional_urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 arduino-cli core install rp2040:rp2040@4.0.2

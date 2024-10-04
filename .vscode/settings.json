@@ -4,5 +4,8 @@
     ],
     "files.associations": {
         "cmath": "cpp"
-    }
+    },
+    "arduino.path": "/home/vscode/.local/bin/",
+    "arduino.commandPath": "arduino-cli",
+    "arduino.useArduinoCli": true
 }
