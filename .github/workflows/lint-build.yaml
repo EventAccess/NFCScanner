@@ -1,0 +1,28 @@
+name: "Lint and test-build"
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+
+jobs:
+  build-poc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.2.0
+        with:
+          python-version: 3.12
+      
+      - name: Install Arduino dependencies
+        run: |
+          export PATH=$HOME/.local/bin/:$PATH
+          ./.devcontainer/devcontainer-postcreate.sh
+      
+      - name: Build POC
+        run: |
+          export PATH=$HOME/.local/bin/:$PATH
+          ./build_all.sh
