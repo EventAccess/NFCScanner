@@ -13,7 +13,7 @@ arduino-cli config set library.enable_unsafe_install true
 
 arduino-cli lib update-index
 
-arduino-cli lib install --git-url https://github.com/adamgreg/arduino-nfc.git#88d07446367bb75a5e3bf5fad5ab409e754640d9
+arduino-cli lib install --git-url https://github.com/oddstr13/arduino-nfc.git#b1ca71170e2984495fe6904605e87671fa3a89ce
 arduino-cli lib install Ethernet@2.0.2
 arduino-cli lib install "Electronic Cats PN7150@2.1.0"
 
