@@ -1,0 +1,17 @@
+meta: tools
+version: 1
+
+tools:
+  - name: arduino-cli
+    version: 1.0.4
+    source: github-releases
+    source_id: arduino/arduino-cli
+    url_pattern: https://github.com/{source_id}/releases/download/v{version}/{name}_{version}_Linux_64bit.tar.gz
+    executable: arduino-cli
+
+  - name: arduino-lint
+    version: 1.2.0
+    source: github-releases
+    source_id: arduino/arduino-lint
+    url_pattern: https://github.com/{source_id}/releases/download/{version}/{name}_{version}_Linux_64bit.tar.gz
+    executable: arduino-lint

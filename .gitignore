@@ -1,2 +1,3 @@
 artifacts/
 tmp/
+*.py[ocd]

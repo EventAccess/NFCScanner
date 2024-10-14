@@ -6,7 +6,11 @@
 	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.12" // python-version
+		}
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -22,8 +26,16 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-vscode.cpptools-extension-pack"
+				"ms-vscode.cpptools-extension-pack",
+				"vscode-arduino.vscode-arduino-community",
+				"GitHub.vscode-github-actions",
+				"ninoseki.vscode-mogami"
 			]
 		}
-	}
+	},
+
+	// mount git dir for meta repo
+	"mounts": [
+		{"type":"bind", "source": "${localWorkspaceFolder}/../.git", "target": "${containerWorkspaceFolder}/../.git"}
+	]
 }
