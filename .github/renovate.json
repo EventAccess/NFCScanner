@@ -1,0 +1,20 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"github>EventAccess/renovate-config"
+	],
+	"customManagers": [
+		{
+			"customType": "regex",
+			"fileMatch": [
+				"tools.yaml"
+			],
+			"matchStrings": [
+				"\\ *-(\\ +(version:\\ ?(?<currentValue>[^\\n]+)|source:\\ ?(?<datasource>[^\\n]+)|source_id:\\ ?(?<packageName>[^\\n]+)|\\w+:\\ ?[^\\n]+)\\n+)+"
+			]
+		}
+	],
+	"regex": {
+		"enabled": true
+	}
+}
