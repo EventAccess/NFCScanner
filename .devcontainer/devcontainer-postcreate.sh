@@ -1,13 +1,7 @@
 #!/bin/bash
 
-pushd /tmp
-    rm -f arduino-cli_*.tar.gz
-    wget https://github.com/arduino/arduino-cli/releases/download/v1.0.4/arduino-cli_1.0.4_Linux_64bit.tar.gz
-    tar xfzv arduino-cli_*.tar.gz
-    mkdir -p ~/.local/bin
-    mv arduino-cli ~/.local/bin/
-    rm arduino-cli_*.tar.gz
-popd
+pip install -r .tools/requirements.txt
+python .tools/install.py
 
 arduino-cli config set library.enable_unsafe_install true
 
