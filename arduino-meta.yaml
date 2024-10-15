@@ -1,0 +1,26 @@
+meta: arduino
+version: 1
+# TODO: Create script to install Arduino dependencies from arduino-meta.yaml
+
+libraries:
+  - name: Nfc
+    source: git
+    version: eventaccess
+    digest: ac508b3b04c41bbab1db525ff72184085331981f
+    url: https://github.com/oddstr13/arduino-nfc.git
+
+  # TODO: Renovate: Add support for git tags in addition to digest
+
+  - name: Ethernet
+    source: arduino
+    version: "2.0.2"
+
+  - name: Electronic Cats PN7150
+    source: arduino
+    version: "2.1.0"
+
+# TODO: Renovate: Create arduino boards manager updater
+cores:
+  - id: rp2040:rp2040
+    repository: https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+    version: "4.0.2"
