@@ -7,6 +7,19 @@
 
 #include <ArduinoJson.h>
 
+#include <Electroniccats_PN7150.h>
+#undef ERROR
+#include <Wire.h>
+
+
+#define PN7150_WIRE (Wire1)
+#define PN7150_IRQ (uint8_t)(9)
+#define PN7150_VEN (uint8_t)(12)
+#define PN7150_ADDR (uint8_t)(0x28)
+
+Electroniccats_PN7150 nfc(PN7150_IRQ, PN7150_VEN, PN7150_ADDR, &PN7150_WIRE);
+String getHexRepresentation(const byte* data, const uint32_t numBytes);
+void displayCardInfo();
 
 // assign a MAC address for the Ethernet controller.
 // fill in your address here:
@@ -21,7 +34,7 @@ IPAddress myDns(192, 168, 42, 1);
 // initialize the library instance:
 EthernetClient ethernet;
 
-auto url = ParsedUrl("http://10.79.1.0:8080/api/nfctag");
+auto url = ParsedUrl("http://10.79.1.0:40001/api/nfctag");
 
 HttpClient http = HttpClient(ethernet, url.host(), url.port());
 
@@ -66,10 +79,36 @@ void setup() {
 
   http.setHttpWaitForDataDelay(10);
   setTimeout(200);
+
+  Serial.println("Detect NFC tags with PN7150");
+
+  Serial.println("Initializing...");
+  pinMode(PN7150_IRQ, INPUT);
+
+  if (nfc.connectNCI()) {  // Wake up the board
+    Serial.println("Error while setting up the mode, check connections!");
+    while (1)
+      ;
+  }
+
+  if (nfc.configureSettings()) {
+    Serial.println("The Configure Settings is failed!");
+    while (1)
+      ;
+  }
+
+  // Read/Write mode as default
+  if (nfc.configMode()) {  // Set up the configuration mode
+    Serial.println("The Configure Mode is failed!!");
+    while (1)
+      ;
+  }
+  nfc.startDiscovery();  // NCI Discovery mode
+  Serial.println("Waiting for an Card ...");
 }
 
 enum TagValidity {
-  ERROR=-1,
+  ERROR=100,
   INVALID=0,
   VALID=1,
 };
@@ -197,11 +236,165 @@ void loop() {
 
   // TODO: Reconnect on connection failure
   //       Both the Ethernet link, and the TCP socket
-  Serial.println("making POST request");
+  //Serial.println("making POST request");
 
-  checkTag("deadbeef");
+  //checkTag("deadbeef");
 
-  Serial.println("Wait five seconds\n-----");
-  Serial.flush();
-  delay(5000);
+  //Serial.println("-----");
+  //Serial.flush();
+
+
+  if (nfc.isTagDetected(5000)) {
+    displayCardInfo();
+
+    // It can detect multiple cards at the same time if they use the same protocol
+    if (nfc.remoteDevice.hasMoreTags()) {
+      nfc.activateNextTagDiscovery();
+      Serial.println("Multiple cards are detected!");
+    }
+
+    Serial.println("Remove the Card");
+    nfc.waitForTagRemoval();
+    Serial.println("Card removed!");
+  }
+
+  //Serial.println("Restarting...");
+  nfc.reset();
+  //Serial.println("Waiting for a Card...");
+  //delay(500);
+}
+
+
+String getHexRepresentation(const byte* data, const uint32_t numBytes) {
+  String hexString;
+
+  if (numBytes == 0) {
+    hexString = "null";
+  }
+
+  for (uint32_t szPos = 0; szPos < numBytes; szPos++) {
+    hexString += "0x";
+    if (data[szPos] <= 0xF)
+      hexString += "0";
+    hexString += String(data[szPos] & 0xFF, HEX);
+    if ((numBytes > 1) && (szPos != numBytes - 1)) {
+      hexString += " ";
+    }
+  }
+  return hexString;
+}
+
+const char* HEX_CHARSET = "0123456789abcdef";
+String toHex(const byte* data, const size_t len) {
+  char res[(len*2)+1] = "";
+  for (size_t i=0; i<len; i++) {
+    res[i*2] = HEX_CHARSET[(data[i] & 0xf0) >> 4];
+    res[(i*2)+1] = HEX_CHARSET[data[i] & 0x0f];;
+  }
+  res[len*2] = 0; // Null terminated
+  return String(res);
+}
+
+void displayCardInfo() {  // Funtion in charge to show the card/s in te field
+  char tmp[16];
+
+  while (true) {
+    switch (nfc.remoteDevice.getProtocol()) {  // Indetify card protocol
+      case nfc.protocol.T1T:
+      case nfc.protocol.T2T:
+      case nfc.protocol.T3T:
+      case nfc.protocol.ISODEP:
+        Serial.print(" - POLL MODE: Remote activated tag type: ");
+        Serial.println(nfc.remoteDevice.getProtocol());
+        break;
+      case nfc.protocol.ISO15693:
+        Serial.println(" - POLL MODE: Remote ISO15693 card activated");
+        break;
+      case nfc.protocol.MIFARE:
+        Serial.println(" - POLL MODE: Remote MIFARE card activated");
+        break;
+      default:
+        Serial.println(" - POLL MODE: Undetermined target");
+        return;
+    }
+
+    String nfc_id = "";
+    TagValidity is_ok;
+
+    switch (nfc.remoteDevice.getModeTech()) {  // Indetify card technology
+      case (nfc.tech.PASSIVE_NFCA):
+        Serial.println("\tTechnology: NFC-A");
+        Serial.print("\tSENS RES = ");
+        Serial.println(getHexRepresentation(nfc.remoteDevice.getSensRes(), nfc.remoteDevice.getSensResLen()));
+
+        Serial.print("\tNFC ID = ");
+        Serial.println(getHexRepresentation(nfc.remoteDevice.getNFCID(), nfc.remoteDevice.getNFCIDLen()));
+        nfc_id = toHex(nfc.remoteDevice.getNFCID(), nfc.remoteDevice.getNFCIDLen());
+        Serial.println(nfc_id);
+
+        Serial.print("\tSEL RES = ");
+        Serial.println(getHexRepresentation(nfc.remoteDevice.getSelRes(), nfc.remoteDevice.getSelResLen()));
+
+        is_ok = checkTag(nfc_id.c_str());
+
+        switch (is_ok) {
+          case (TagValidity::VALID):
+            Serial.println("\tBackend validated tag as OK");
+            break;
+          case (TagValidity::INVALID):
+            Serial.println("\tBackend validated tag as REJECTED");
+            break;
+          case (TagValidity::ERROR):
+            Serial.println("\tBackend validation failed with ERROR");
+            break;
+        }
+
+        break;
+
+      case (nfc.tech.PASSIVE_NFCB):
+        Serial.println("\tTechnology: NFC-B");
+        Serial.print("\tSENS RES = ");
+        Serial.println(getHexRepresentation(nfc.remoteDevice.getSensRes(), nfc.remoteDevice.getSensResLen()));
+
+        Serial.println("\tAttrib RES = ");
+        Serial.println(getHexRepresentation(nfc.remoteDevice.getAttribRes(), nfc.remoteDevice.getAttribResLen()));
+
+        break;
+
+      case (nfc.tech.PASSIVE_NFCF):
+        Serial.println("\tTechnology: NFC-F");
+        Serial.print("\tSENS RES = ");
+        Serial.println(getHexRepresentation(nfc.remoteDevice.getSensRes(), nfc.remoteDevice.getSensResLen()));
+
+        Serial.print("\tBitrate = ");
+        Serial.println((nfc.remoteDevice.getBitRate() == 1) ? "212" : "424");
+
+        break;
+
+      case (nfc.tech.PASSIVE_NFCV):
+        Serial.println("\tTechnology: NFC-V");
+        Serial.print("\tID = ");
+        Serial.println(getHexRepresentation(nfc.remoteDevice.getID(), sizeof(nfc.remoteDevice.getID())));
+
+        Serial.print("\tAFI = ");
+        Serial.println(nfc.remoteDevice.getAFI());
+
+        Serial.print("\tDSF ID = ");
+        Serial.println(nfc.remoteDevice.getDSFID(), HEX);
+        break;
+
+      default:
+        break;
+    }
+
+    // It can detect multiple cards at the same time if they are the same technology
+    if (nfc.remoteDevice.hasMoreTags()) {
+      Serial.println("Multiple cards are detected!");
+      if (!nfc.activateNextTagDiscovery()) {
+        break;  // Can't activate next tag
+      }
+    } else {
+      break;
+    }
+  }
 }
