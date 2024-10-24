@@ -29,7 +29,8 @@
 				"ms-vscode.cpptools-extension-pack",
 				"vscode-arduino.vscode-arduino-community",
 				"GitHub.vscode-github-actions",
-				"ninoseki.vscode-mogami"
+				"ninoseki.vscode-mogami",
+				"EditorConfig.EditorConfig"
 			]
 		}
 	},
