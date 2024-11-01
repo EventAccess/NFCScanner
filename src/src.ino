@@ -352,37 +352,8 @@ void displayCardInfo() {  // Funtion in charge to show the card/s in te field
         break;
 
       case (nfc.tech.PASSIVE_NFCB):
-        Serial.println("\tTechnology: NFC-B");
-        Serial.print("\tSENS RES = ");
-        Serial.println(getHexRepresentation(nfc.remoteDevice.getSensRes(), nfc.remoteDevice.getSensResLen()));
-
-        Serial.println("\tAttrib RES = ");
-        Serial.println(getHexRepresentation(nfc.remoteDevice.getAttribRes(), nfc.remoteDevice.getAttribResLen()));
-
-        break;
-
       case (nfc.tech.PASSIVE_NFCF):
-        Serial.println("\tTechnology: NFC-F");
-        Serial.print("\tSENS RES = ");
-        Serial.println(getHexRepresentation(nfc.remoteDevice.getSensRes(), nfc.remoteDevice.getSensResLen()));
-
-        Serial.print("\tBitrate = ");
-        Serial.println((nfc.remoteDevice.getBitRate() == 1) ? "212" : "424");
-
-        break;
-
       case (nfc.tech.PASSIVE_NFCV):
-        Serial.println("\tTechnology: NFC-V");
-        Serial.print("\tID = ");
-        Serial.println(getHexRepresentation(nfc.remoteDevice.getID(), sizeof(nfc.remoteDevice.getID())));
-
-        Serial.print("\tAFI = ");
-        Serial.println(nfc.remoteDevice.getAFI());
-
-        Serial.print("\tDSF ID = ");
-        Serial.println(nfc.remoteDevice.getDSFID(), HEX);
-        break;
-
       default:
         break;
     }
