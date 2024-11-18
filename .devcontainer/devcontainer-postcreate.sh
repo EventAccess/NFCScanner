@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pip install -r .tools/requirements.txt
-python .tools/install.py
+python .tools/install_tools.py
 
 arduino-cli config set library.enable_unsafe_install true
 
