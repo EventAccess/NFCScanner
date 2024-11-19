@@ -1,0 +1,32 @@
+meta: arduino
+version: 1
+
+libraries:
+  - name: Nfc
+    source: git
+    version: eventaccess
+    digest: b1ca71170e2984495fe6904605e87671fa3a89ce
+    url: https://github.com/oddstr13/arduino-nfc.git
+
+  # TODO: Renovate: Add support for git tags in addition to digest
+
+  - name: Ethernet
+    source: arduino
+    version: "2.0.2"
+
+  - name: Electronic Cats PN7150
+    source: arduino
+    version: "2.1.0"
+
+  - name: ArduinoHttpClient
+    source: arduino
+    version: "0.6.1"
+
+  - name: ArduinoJson
+    source: arduino
+    version: "7.2.0"
+
+cores:
+  - id: rp2040:rp2040
+    repository: https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+    version: "4.0.2"

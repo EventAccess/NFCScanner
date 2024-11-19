@@ -7,13 +7,71 @@
 		{
 			"customType": "regex",
 			"fileMatch": [
-				"tools.yaml"
+				"^\\.tools/tools\\.yaml$"
 			],
+			"matchStringsStrategy": "recursive",
 			"matchStrings": [
-				"\\ *-(\\ +(version:\\ ?(?<currentValue>[^\\n]+)|source:\\ ?(?<datasource>[^\\n]+)|source_id:\\ ?(?<packageName>[^\\n]+)|\\w+:\\ ?[^\\n]+)\\n+)+"
+				"(^|\\n)tools:\\n(([- ]{2,}\\w+:.*?|[ \\t]*)(#.*)?\\n)+",
+				"\\ *-(\\ +(version:\\ ?[\"']?(?<currentValue>[^\\n\"']+)[\"']?|source:\\ ?[\"']?(?<datasource>[^\\n\"']+)[\"']?|source_id:\\ ?[\"']?(?<packageName>[^\\n\"']+)[\"']?|\\w+:\\ ?[^\\n]+)\\n+)+"
 			]
+		},
+		{
+			"customType": "regex",
+			"description": "Arduino library dependencies from the Arduino library manager",
+			"fileMatch": [
+				"(^|/)arduino-meta\\.yaml$"
+			],
+			"matchStringsStrategy": "recursive",
+			"matchStrings": [
+				"(^|\\n)libraries:\\n(([- ]{2,}\\w+:.*?|[ \\t]*)(#.*)?\\n)+",
+				"\\ *-(\\ +(name:\\ ?[\"']?(?<packageName>[^\\n\"']+)[\"']?|source:\\ ?[\"']?arduino[\"']?|version:\\ ?[\"']?(?<currentValue>[^\\n\"']+)[\"']?)[\\ \\n]*\\n+){3}"
+			],
+			"datasourceTemplate": "custom.arduino-lib"
+		},
+		{
+			"customType": "regex",
+			"description": "Arduino library dependencies from git (branch with commit)",
+			"fileMatch": [
+				"(^|/)arduino-meta\\.yaml$"
+			],
+			"matchStringsStrategy": "recursive",
+			"matchStrings": [
+				"(^|\\n)libraries:\\n(([- ]{2,}\\w+:.*?|[ \\t]*)(#.*)?\\n)+",
+				"\\ *-(\\ +(name:\\ ?[\"']?[^\\n\"']+[\"']?|version:\\ ?[\"']?(?<currentValue>[^\\n\"']+)[\"']?|source:\\ ?[\"']?git[\"']?|digest:\\ ?[\"']?(?<currentDigest>[a-fA-F0-9]{40})[\"']?|url:\\ ?[\"']?(?<packageName>[^\\n\"']+)[\"']?)[\\ \\n]*\\n+){4,5}"
+			],
+			"versioningTemplate": "git",
+			"datasourceTemplate": "git-refs"
+		},
+		{
+			"customType": "regex",
+			"description": "Arduino package dependencies from the Arduino boards manager",
+			"fileMatch": [
+				"(^|/)arduino-meta\\.yaml$"
+			],
+			"matchStringsStrategy": "recursive",
+			"matchStrings": [
+				"(^|\\n)cores:\\n(([- ]{2,}\\w+:.*?|[ \\t]*)(#.*)?\\n)+",
+				"\\ *-(\\ +(id:\\ ?[\"']?(?<packageName>[^\\n\"']+)[\"']?|repository:\\ ?[\"']?(?<registryUrl>[^\\n\"']+)[\"']?|version:\\ ?[\"']?(?<currentValue>[^\\n\"']+)[\"']?)[\\ \\n]*\\n+){2,3}"
+			],
+			"datasourceTemplate": "custom.arduino-package"
 		}
 	],
+	"customDatasources": {
+		"arduino-lib": {
+			"defaultRegistryUrlTemplate": "https://downloads.arduino.cc/libraries/library_index.json",
+			"format": "json",
+			"transformTemplates": [
+				"{ \"releases\": $map(libraries[name=\"{{packageName}}\"], function($v) { { \"version\": $v.version, \"sourceUrl\": $v.repository } }), \"homepage\": libraries[name=\"{{packageName}}\"][-1].website, \"sourceUrl\": libraries[name=\"{{packageName}}\"][-1].repository }"
+			]
+		},
+		"arduino-package": {
+			"defaultRegistryUrlTemplate": "https://downloads.arduino.cc/packages/package_index.json",
+			"format": "json",
+			"transformTemplates": [
+				"($packageName := \"{{packageName}}\";$_PN_SPL := $split($packageName, \":\");$package := $_PN_SPL[0];$arch := $_PN_SPL[1];{ \"releases\": $.packages[name=$package].platforms[architecture=$arch].{ \"version\": version }, \"homepage\": $.packages[name=$package].websiteURL})"
+			]
+		}
+	},
 	"regex": {
 		"enabled": true
 	}
