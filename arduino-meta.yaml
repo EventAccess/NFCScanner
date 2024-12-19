@@ -29,4 +29,4 @@ libraries:
 cores:
   - id: rp2040:rp2040
     repository: https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
-    version: "4.3.1"
+    version: "4.4.0"
