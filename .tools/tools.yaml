@@ -10,7 +10,7 @@ tools:
     executable: arduino-cli
 
   - name: arduino-lint
-    version: 1.2.1
+    version: 1.3.0
     source: github-releases
     source_id: arduino/arduino-lint
     url_pattern: https://github.com/{source_id}/releases/download/{version}/{name}_{version}_Linux_64bit.tar.gz
