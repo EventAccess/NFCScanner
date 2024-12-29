@@ -24,7 +24,7 @@ libraries:
 
   - name: ArduinoJson
     source: arduino
-    version: "7.2.1"
+    version: "7.3.0"
 
 cores:
   - id: rp2040:rp2040
