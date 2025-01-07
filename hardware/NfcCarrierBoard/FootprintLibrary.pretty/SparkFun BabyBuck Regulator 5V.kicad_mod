@@ -1,0 +1,173 @@
+(footprint "SparkFun BabyBuck Regulator 5V"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 4.191 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "01a01813-ef3f-4c74-8020-9c4a8915fc9c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "SparkFun BabyBuck Regulator 5V"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "834fa880-f452-47ea-85c7-1b9337111c40")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2d455d22-6b49-462a-b8e4-d85d1b87250a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ee32050b-1c8b-4d0c-baae-06c3ca8d7c74")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0fd27765-212b-4687-aadb-98c15662ee16")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -9.398 3.302)
+		(end 6.477 16.51)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "107888ce-8217-4c22-8a19-b4d6581ab267")
+	)
+	(fp_rect
+		(start -9.144 3.556)
+		(end 1.905 16.256)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Dwgs.User")
+		(uuid "508ab860-db08-4b0e-a785-93a917e13a77")
+	)
+	(fp_rect
+		(start -9.525 3.175)
+		(end 6.604 16.637)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "d176a62b-df33-4daa-a459-4966e8f5d395")
+	)
+	(fp_text user "on bottom"
+		(at -3.683 7.112 0)
+		(unlocked yes)
+		(layer "Cmts.User")
+		(uuid "c0f26140-8c87-4ba6-a917-53b55035ea3e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify bottom)
+		)
+	)
+	(fp_text user "Heatsink pad"
+		(at -3.556 5.588 0)
+		(unlocked yes)
+		(layer "Cmts.User")
+		(uuid "e579b3a9-ae2b-43fc-8f87-7c8223edd0cf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify bottom)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 4.191 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "64f81ba7-71b3-406e-82ab-1759092b42e2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 5.08 5.08 270)
+		(size 1.524 1.524)
+		(drill 0.762)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "38d4699c-029d-4745-9c9c-c39b4c475646")
+	)
+	(pad "2" thru_hole circle
+		(at 5.08 7.62 270)
+		(size 1.524 1.524)
+		(drill 0.762)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8b00d745-d759-4888-8554-33742069561b")
+	)
+	(pad "3" thru_hole circle
+		(at 5.08 10.16 270)
+		(size 1.524 1.524)
+		(drill 0.762)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "eebb0387-4ea5-4db5-b478-ab20644cc8a2")
+	)
+	(pad "4" thru_hole circle
+		(at 5.08 12.7 270)
+		(size 1.524 1.524)
+		(drill 0.762)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "4ee38367-ba8a-44e9-ba63-8810f7af0c59")
+	)
+)
