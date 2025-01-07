@@ -3,3 +3,8 @@
 \#auto_saved_files#
 *-backups
 fp-info-cache
+
+# Renderings & reports
+*.svg
+*.pdf
+*.rpt
