@@ -6376,7 +6376,7 @@
 		(uuid 947b5bdf-6d3a-4c8c-9356-0877cc10159b)
 	)
 	(rectangle
-		(start 124.46 101.6)
+		(start 116.84 101.6)
 		(end 163.83 135.89)
 		(stroke
 			(width 0)
@@ -6474,17 +6474,6 @@
 		)
 		(uuid "4037820a-88b1-43e5-99f0-cb69fd357b22")
 	)
-	(text "TODO: Add decopuling caps"
-		(exclude_from_sim no)
-		(at 222.25 59.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "53c33293-c4ab-4a02-9239-fcb5426aa8ad")
-	)
 	(text "I²C 0"
 		(exclude_from_sim no)
 		(at 208.026 17.78 0)
@@ -6516,9 +6505,9 @@
 		)
 		(uuid "72dc1557-84f1-4e4e-b9c0-0733aafacc36")
 	)
-	(text "TODO: Add power input pins for the PoE FeatherWing board"
+	(text "TODO: Add PoE FeatherWing specific connections\n      (I²C, +5V power, IRQ)"
 		(exclude_from_sim no)
-		(at 222.25 67.31 0)
+		(at 222.25 65.786 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6529,7 +6518,7 @@
 	)
 	(text "1-Wire"
 		(exclude_from_sim no)
-		(at 132.08 104.394 0)
+		(at 124.46 104.394 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -6558,17 +6547,6 @@
 			(justify left top)
 		)
 		(uuid "c421d117-7bed-4de4-9e67-9f7a6d2880b0")
-	)
-	(text "TODO: Add IRQ pin?"
-		(exclude_from_sim no)
-		(at 222.25 62.23 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e778a3a2-1290-4061-bafe-447d492b5826")
 	)
 	(global_label "NEO_DO"
 		(shape output)
@@ -7844,6 +7822,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 181.61 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20588962-5b1c-4308-b447-b0417ca1fe83")
+		(property "Reference" "C10"
+			(at 185.42 81.2799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1µF"
+			(at 185.42 83.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 182.5752 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 181.61 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9bbf8489-2b99-4252-b031-549ac18224d3")
+		)
+		(pin "2"
+			(uuid "391f6809-557e-4689-9de8-5f5475f97b7d")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "C10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 276.86 44.45 0)
 		(mirror y)
@@ -7905,6 +7953,72 @@
 			(project "NfcCarrierBoard"
 				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
 					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 265.43 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "30b4e808-1c15-4576-a58c-e1982f7f1f81")
+		(property "Reference" "#PWR039"
+			(at 271.78 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 270.51 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 265.43 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 265.43 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 265.43 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ecff238c-677e-4daa-88a2-7e2182ec2218")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -8341,6 +8455,138 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 121.92 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4d2abc2f-16ae-4a05-9689-76d5861d3948")
+		(property "Reference" "#PWR034"
+			(at 121.92 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 121.92 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 121.92 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2af82a6f-79f6-4e33-a344-40e492a43673")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 93.98 20.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f785897-1dcc-479c-b9a9-1b58ff6072af")
+		(property "Reference" "#PWR041"
+			(at 93.98 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 93.98 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 93.98 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e83ca6bf-1de5-460a-a44e-25a4fa6fdea7")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 160.02 172.72 0)
 		(unit 1)
@@ -8407,6 +8653,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 121.92 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "50ae8bdb-a956-4bdc-8073-2dc53851fecd")
+		(property "Reference" "#PWR035"
+			(at 121.92 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 121.92 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 121.92 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6518a69d-5e50-413a-879c-35a50ec4ebed")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 215.9 106.68 0)
 		(unit 1)
@@ -8467,6 +8779,142 @@
 			(project "NfcCarrierBoard"
 				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
 					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 261.62 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5955d564-7aa2-4c7b-b0c8-734ba0895d0f")
+		(property "Reference" "C8"
+			(at 260.3499 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1µF"
+			(at 262.8899 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 265.43 79.0448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 261.62 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 261.62 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "365aa2ee-b00d-4fe8-a028-1e90a49e961b")
+		)
+		(pin "2"
+			(uuid "afe86ce9-c9a4-48a4-8af3-d294cfd0ba7a")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 181.61 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5a45e402-5260-4da2-a0f5-3563d9f1f3ab")
+		(property "Reference" "#PWR042"
+			(at 181.61 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 181.61 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "02410148-fb8c-4b0f-a276-397a9f08c641")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -8604,6 +9052,72 @@
 			(project "NfcCarrierBoard"
 				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
 					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 81.28 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5e2feb95-02fd-484a-bc7f-902211acf35b")
+		(property "Reference" "#PWR037"
+			(at 81.28 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 81.28 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 81.28 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ebc6a00a-b805-4dec-b0f1-d5e3f589b66d")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -9996,6 +10510,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 81.28 20.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aacb0ba0-75b9-4b01-9ccd-b2fafa3c6532")
+		(property "Reference" "#PWR036"
+			(at 81.28 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 81.28 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 81.28 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b036b9d2-4dd5-4c0c-9ff3-b159ffc374e1")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 199.39 64.77 90)
 		(unit 1)
@@ -10472,6 +11052,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 93.98 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5c2dbd5-2224-456e-a186-4e70b16c26c9")
+		(property "Reference" "#PWR040"
+			(at 93.98 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 93.98 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 93.98 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f1c045bf-1ea4-4cd2-ac4d-51a3e317efd6")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 226.06 30.48 0)
 		(mirror y)
@@ -10603,6 +11249,76 @@
 			(project "NfcCarrierBoard"
 				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
 					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 81.28 24.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c7be5dc7-bf16-46fe-acd7-dd3e7f890086")
+		(property "Reference" "C7"
+			(at 85.09 22.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1µF"
+			(at 85.09 25.3999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 82.2452 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 81.28 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 81.28 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "485f348b-2065-4d26-9718-b8e56040d478")
+		)
+		(pin "2"
+			(uuid "b54865ce-e936-40a2-8bbc-4e98b5e45c10")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -10823,6 +11539,76 @@
 			(project ""
 				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
 					(reference "A4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 121.92 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ccc32f0c-9acd-4457-b1c9-451cfa234f24")
+		(property "Reference" "C6"
+			(at 125.73 123.1899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1µF"
+			(at 125.73 125.7299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 122.8852 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 121.92 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 121.92 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f1c01778-e3f8-4399-bff1-797745a6b920")
+		)
+		(pin "2"
+			(uuid "8bd01b2c-b646-44d0-a392-93ead7799694")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -11242,6 +12028,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 257.81 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e0d613d2-39b1-4f37-9f67-2b933988c7a1")
+		(property "Reference" "#PWR038"
+			(at 261.62 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 252.73 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 257.81 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 257.81 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 257.81 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b9e155fb-45a8-4509-8193-9d66f17fcc8f")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "SymbolLibrary:WIZnet_Ethernet_HAT")
 		(at 247.65 139.7 0)
 		(unit 1)
@@ -11425,6 +12277,76 @@
 	)
 	(symbol
 		(lib_id "Device:C")
+		(at 93.98 24.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5e294b9-795f-44c8-b1fd-019eacaba2e2")
+		(property "Reference" "C9"
+			(at 97.79 22.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1µF"
+			(at 97.79 25.3999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 94.9452 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 93.98 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 93.98 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "695467af-b33f-4dbe-8d74-f1398d5e2f84")
+		)
+		(pin "2"
+			(uuid "1c4ebcaf-2a61-4564-918f-37d5d62c2069")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
 		(at 198.12 146.05 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11554,6 +12476,72 @@
 			(project "NfcCarrierBoard"
 				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
 					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 181.61 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e9203199-0fd3-4869-8211-e0a1945f2612")
+		(property "Reference" "#PWR043"
+			(at 181.61 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+12V"
+			(at 181.61 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 181.61 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1528cab3-86b4-4f8f-97d1-cb8124862627")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
