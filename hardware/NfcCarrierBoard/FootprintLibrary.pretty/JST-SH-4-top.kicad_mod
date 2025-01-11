@@ -1,0 +1,218 @@
+(footprint "JST-SH-4-top"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "4-pin JST SH connector for top-loading (1mm pitch)")
+	(tags "SH4, SH-4, QUIIC, STEMMA QT")
+	(property "Reference" "REF**"
+		(at 0 -3.1 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "28b841d8-fdc4-460e-b2cf-d16c22b98483")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "JST-SH-4"
+		(at 0 -4.3 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "d6d5d19d-cf5b-4146-ba6e-7e4c8b7db818")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7fcbcf86-1615-4412-b3e7-3fd94945624c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eSH.pdf"
+		(at 0 5.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f7cca50b-0b1d-4051-a6bb-2c62c0b5108b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "307d8c38-424a-4ba7-b3dc-14f6e8ea2ddd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.5 1)
+		(end -1.5 1.7)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "f31ef4ad-4a53-476b-801f-53f3e70c27b2")
+	)
+	(fp_line
+		(start -0.5 1)
+		(end -0.5 1.7)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "77d08e12-ac7b-45b7-8737-466809260d35")
+	)
+	(fp_line
+		(start 0.5 1)
+		(end 0.5 1.7)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "febd13b1-07b5-40d2-be12-c15e660a222c")
+	)
+	(fp_line
+		(start 1.5 1)
+		(end 1.5 1.7)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "1c7ef5e1-8c47-4833-bb38-f307ac0f6452")
+	)
+	(fp_rect
+		(start 3 1)
+		(end -3 -1.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "a9148c25-0a16-438a-9212-2e0d993257dc")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 3.3 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "87378ff4-42fe-415c-89f3-555bfe180c89")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" smd rect
+		(at -2.8 -1.2 270)
+		(size 1.8 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "656c0aa7-2e71-4f4b-978d-afe324a7712f")
+	)
+	(pad "" smd rect
+		(at 2.8 -1.2 270)
+		(size 1.8 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "c72c0366-517f-494b-9a99-282e084cc32e")
+	)
+	(pad "1" smd rect
+		(at -1.5 1.3 270)
+		(size 1.55 0.6)
+		(drill
+			(offset 0.025 0)
+		)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "0b5a7816-bda4-4185-aeeb-4194fcd2910a")
+	)
+	(pad "2" smd rect
+		(at -0.5 1.3 270)
+		(size 1.55 0.6)
+		(drill
+			(offset 0.025 0)
+		)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "c3a4255c-be59-4774-b68e-1e8d53d283f0")
+	)
+	(pad "3" smd rect
+		(at 0.5 1.3 270)
+		(size 1.55 0.6)
+		(drill
+			(offset 0.025 0)
+		)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "a8cbb883-20a1-4ba8-9d37-727ccb1e8f1f")
+	)
+	(pad "4" smd rect
+		(at 1.5 1.3 270)
+		(size 1.55 0.6)
+		(drill
+			(offset 0.025 0)
+		)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "d43797e6-1d3d-4230-a51c-cf4309d55762")
+	)
+	(group ""
+		(uuid "6a7392fd-6e03-4695-9543-42b359e3e4c5")
+		(members "0b5a7816-bda4-4185-aeeb-4194fcd2910a" "656c0aa7-2e71-4f4b-978d-afe324a7712f"
+			"a8cbb883-20a1-4ba8-9d37-727ccb1e8f1f" "c3a4255c-be59-4774-b68e-1e8d53d283f0"
+			"c72c0366-517f-494b-9a99-282e084cc32e" "d43797e6-1d3d-4230-a51c-cf4309d55762"
+		)
+	)
+	(group ""
+		(uuid "7957f049-4570-479c-a0b8-bf06eecf527d")
+		(members "6a7392fd-6e03-4695-9543-42b359e3e4c5" "fe00657e-44f9-4c86-9eba-ab945e7c4012")
+	)
+	(group ""
+		(uuid "fe00657e-44f9-4c86-9eba-ab945e7c4012")
+		(members "1c7ef5e1-8c47-4833-bb38-f307ac0f6452" "77d08e12-ac7b-45b7-8737-466809260d35"
+			"a9148c25-0a16-438a-9212-2e0d993257dc" "f31ef4ad-4a53-476b-801f-53f3e70c27b2"
+			"febd13b1-07b5-40d2-be12-c15e660a222c"
+		)
+	)
+	(model "${KIPRJMOD}/FootprintLibrary.3dshapes/BM04B-SRSS-TBT.step"
+		(offset
+			(xyz 0 1.2 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)
