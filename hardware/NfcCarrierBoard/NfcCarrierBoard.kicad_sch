@@ -5298,10 +5298,6 @@
 		(at 66.04 121.92)
 		(uuid "b7738c50-bd7e-4a5f-9c49-b654d4684cbc")
 	)
-	(no_connect
-		(at 63.5 48.26)
-		(uuid "d2f55e9b-b5f7-4d9a-b13e-4ccb83a0190f")
-	)
 	(wire
 		(pts
 			(xy 148.59 149.86) (xy 140.97 149.86)
@@ -6004,6 +6000,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 66.04) (xy 67.31 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "694308f8-e648-437b-8fb8-30e3f12b6681")
+	)
+	(wire
+		(pts
 			(xy 260.35 35.56) (xy 255.27 35.56)
 		)
 		(stroke
@@ -6124,6 +6130,16 @@
 	)
 	(wire
 		(pts
+			(xy 31.75 40.64) (xy 38.1 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f187f76-00e3-49d1-93a0-6ddc92071f09")
+	)
+	(wire
+		(pts
 			(xy 53.34 25.4) (xy 53.34 27.94)
 		)
 		(stroke
@@ -6201,6 +6217,16 @@
 			(type default)
 		)
 		(uuid "86d7b847-025c-4724-a384-5e17e5b24413")
+	)
+	(wire
+		(pts
+			(xy 63.5 63.5) (xy 67.31 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "876a5088-5a54-4f06-8084-effb4579baf3")
 	)
 	(wire
 		(pts
@@ -6494,6 +6520,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 58.42) (xy 67.31 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afcf6d43-a6cc-4d64-996f-a712cc1d8eae")
+	)
+	(wire
+		(pts
 			(xy 63.5 119.38) (xy 63.5 116.84)
 		)
 		(stroke
@@ -6561,6 +6597,16 @@
 			(type default)
 		)
 		(uuid "bbc4bfd2-3d78-45f0-8d22-dd6a4677b9fe")
+	)
+	(wire
+		(pts
+			(xy 63.5 48.26) (xy 67.31 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc8f3d19-711c-4c56-b50b-6cb1d5ddaf9e")
 	)
 	(wire
 		(pts
@@ -6784,6 +6830,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 60.96) (xy 67.31 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df06acef-46a5-4c1c-a4f3-d00d0d1e9c78")
+	)
+	(wire
+		(pts
 			(xy 46.99 184.15) (xy 46.99 186.69)
 		)
 		(stroke
@@ -6901,6 +6957,26 @@
 			(type default)
 		)
 		(uuid "ee651fc8-478e-4e7c-b113-f06e8a1487bd")
+	)
+	(wire
+		(pts
+			(xy 63.5 53.34) (xy 67.31 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efa42940-931e-4e89-bda1-df7a38786652")
+	)
+	(wire
+		(pts
+			(xy 63.5 55.88) (xy 67.31 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2ed47b9-3e00-4b9f-8c3c-06222d2b1c97")
 	)
 	(wire
 		(pts
@@ -9904,6 +9980,71 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 67.31 63.5 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4458e6a9-e3f7-4569-a772-a85500affac2")
+		(property "Reference" "TP9"
+			(at 74.93 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 70.612 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 67.31 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 67.31 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fe064596-c48b-4b67-8d34-c7a07bcb79ee")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_Schottky")
 		(at 52.07 119.38 0)
 		(mirror y)
@@ -11602,6 +11743,71 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 67.31 58.42 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7b28f5f8-2735-4a50-9b5d-298909143ca9")
+		(property "Reference" "TP7"
+			(at 74.93 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 70.612 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 67.31 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 67.31 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b97df94-1b2c-4d46-b75e-aaf70b919519")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 113.03 187.96 0)
 		(unit 1)
@@ -12174,6 +12380,71 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 67.31 66.04 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9482c735-1299-4281-a14b-5757086cae4b")
+		(property "Reference" "TP10"
+			(at 74.93 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 70.612 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 67.31 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 67.31 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1270fafd-d159-454f-9aa9-f10ed19dbc45")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
 		(at 158.75 82.55 0)
 		(unit 1)
@@ -12715,6 +12986,71 @@
 			(project ""
 				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
 					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 67.31 53.34 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b8ac0b1b-eeb3-4e30-8465-a2b9952674f7")
+		(property "Reference" "TP5"
+			(at 74.93 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 70.612 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 67.31 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 67.31 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3cdf279b-3975-4e53-af42-7f01b12c78f7")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -13536,6 +13872,71 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 67.31 55.88 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cb483b96-9086-41a0-bdfa-d3a9487b95fb")
+		(property "Reference" "TP6"
+			(at 74.93 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 70.612 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 67.31 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 67.31 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "03229a45-43e2-4309-be1e-1e486507a0d2")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "SymbolLibrary:SparkFun_BabyBuck_Regulator_Breakout")
 		(at 73.66 116.84 0)
 		(unit 1)
@@ -13890,6 +14291,71 @@
 			(project ""
 				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
 					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 67.31 48.26 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d760539f-2782-470a-b10b-710751fb8a3a")
+		(property "Reference" "TP3"
+			(at 74.93 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 70.612 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 67.31 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 67.31 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bfd77378-641b-41c2-a912-4c01f1dcc2cb")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -14818,6 +15284,71 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 31.75 40.64 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f015201a-992c-48a1-b32b-397157915604")
+		(property "Reference" "TP4"
+			(at 24.13 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 28.448 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 31.75 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 31.75 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 31.75 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b85db669-c6b0-47ef-8e64-144c57dc8a28")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 127 90.17 0)
 		(unit 1)
@@ -15176,6 +15707,71 @@
 			(project "NfcCarrierBoard"
 				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
 					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 67.31 60.96 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ff5f373a-e57e-4d65-a8ec-82ce768564bc")
+		(property "Reference" "TP8"
+			(at 74.93 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 70.612 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 67.31 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 67.31 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "10d6c68c-8fed-4d3f-a5bb-075d4de196db")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
