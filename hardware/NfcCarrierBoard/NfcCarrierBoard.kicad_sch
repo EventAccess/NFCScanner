@@ -3538,15 +3538,14 @@
 				)
 			)
 		)
-		(symbol "Switch:SW_Push"
-			(pin_numbers hide)
+		(symbol "Switch:SW_Push_Shielded"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 1.27 2.54 0)
+				(at 4.318 2.032 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3554,8 +3553,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "SW_Push"
-				(at 0 -1.524 0)
+			(property "Value" "SW_Push_Shielded"
+				(at 0 4.572 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3580,7 +3579,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Push button switch, generic, two pins"
+			(property "Description" "Generic push-button switch, two contact pins and shield pin(s)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3589,7 +3588,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "switch normally-open pushbutton push-button"
+			(property "ki_keywords" "switch normally-open pushbutton momentary"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3598,7 +3597,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "SW_Push_0_1"
+			(symbol "SW_Push_Shielded_0_1"
 				(circle
 					(center -2.032 0)
 					(radius 0.508)
@@ -3628,6 +3627,30 @@
 					)
 					(stroke
 						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 2.54) (xy 3.048 2.54) (xy 3.048 -1.143) (xy -3.048 -1.143) (xy -3.048 2.54) (xy -0.508 2.54)
+					)
+					(stroke
+						(width -0.0254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 2.54) (xy 3.048 2.54) (xy 3.048 -1.143) (xy -3.048 -1.143) (xy -3.048 2.54) (xy -0.508 2.54)
+					)
+					(stroke
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -3674,6 +3697,37 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "SW_Push_Shielded_1_1"
+				(rectangle
+					(start -3.048 2.54)
+					(end 3.048 -1.27)
+					(stroke
+						(width -0.0254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "SH"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5855,6 +5909,12 @@
 		(uuid "550ac650-adc8-4971-9afc-db1a6b3c34f4")
 	)
 	(junction
+		(at 205.74 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "66b4780f-f628-4632-a694-b1744a28670a")
+	)
+	(junction
 		(at 135.89 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6566,7 +6626,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 152.4) (xy 213.36 152.4)
+			(xy 198.12 152.4) (xy 205.74 152.4)
 		)
 		(stroke
 			(width 0)
@@ -6703,6 +6763,16 @@
 			(type default)
 		)
 		(uuid "6abea5d1-2a75-4f3c-a3f4-53e14470767e")
+	)
+	(wire
+		(pts
+			(xy 205.74 143.51) (xy 205.74 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e7854a3-1bc7-4bf8-a1dd-fe11c17a5970")
 	)
 	(wire
 		(pts
@@ -7443,6 +7513,16 @@
 			(type default)
 		)
 		(uuid "c8c46fd5-9db9-49e3-92ef-dd6d4a431ec2")
+	)
+	(wire
+		(pts
+			(xy 205.74 152.4) (xy 213.36 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca3eaa2a-36e2-4c4d-950d-569737ebed37")
 	)
 	(wire
 		(pts
@@ -12651,7 +12731,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
+		(lib_id "Switch:SW_Push_Shielded")
 		(at 205.74 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12676,7 +12756,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "FootprintLibrary:SW_TS11-674-105-BK-260-RA-D"
 			(at 205.74 134.62 0)
 			(effects
 				(font
@@ -12694,7 +12774,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
+		(property "Description" "Generic push-button switch, two contact pins and shield pin(s)"
 			(at 205.74 139.7 0)
 			(effects
 				(font
@@ -12708,6 +12788,9 @@
 		)
 		(pin "2"
 			(uuid "845c0a1f-581b-438a-a358-cf1e37d0cfa6")
+		)
+		(pin "SH"
+			(uuid "b963b8f9-fd1f-424d-a184-dbaf2b0ec5c9")
 		)
 		(instances
 			(project ""
@@ -15987,15 +16070,15 @@
 	(symbol
 		(lib_id "Device:C")
 		(at 198.12 146.05 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "e6dfd197-c0be-4018-9ee6-44256d1ec7a0")
 		(property "Reference" "C3"
-			(at 201.93 144.7799 0)
+			(at 194.31 144.7799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16004,7 +16087,7 @@
 			)
 		)
 		(property "Value" "0.1µF"
-			(at 201.93 147.3199 0)
+			(at 194.31 147.3199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16013,7 +16096,7 @@
 			)
 		)
 		(property "Footprint" "FootprintLibrary:SMD_HANDSOLDER_UNIVERSAL_0603_0805_1206"
-			(at 199.0852 149.86 0)
+			(at 197.1548 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
