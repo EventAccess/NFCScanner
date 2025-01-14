@@ -12783,6 +12783,24 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "TS11-674-105-BK-260-RA-D"
+			(at 205.74 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey PN" "2223-TS11-674-105-BK-260-RA-D-ND"
+			(at 205.74 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b39bbb45-3291-45b8-b300-bf666ebb964d")
 		)
