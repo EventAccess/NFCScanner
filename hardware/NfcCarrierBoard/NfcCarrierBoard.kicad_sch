@@ -8914,6 +8914,28 @@
 			)
 		)
 	)
+	(global_label "+12V Input"
+		(shape passive)
+		(at 124.46 119.38 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cb8bc36e-db32-4cfd-8f5a-5c7603c636d5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 124.46 106.681 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "TX"
 		(shape input)
 		(at 97.79 31.75 180)
@@ -12146,7 +12168,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
 			(at 267.97 97.79 0)
 			(effects
 				(font
@@ -14019,7 +14041,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
 			(at 267.97 101.6 0)
 			(effects
 				(font
