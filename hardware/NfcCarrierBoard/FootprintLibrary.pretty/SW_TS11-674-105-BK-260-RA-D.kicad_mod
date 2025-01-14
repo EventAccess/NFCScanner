@@ -400,4 +400,15 @@
 		(solder_mask_margin 0.102)
 		(uuid "7650387a-6adb-4a2e-84de-52950573ac17")
 	)
+	(model "${KIPRJMOD}/FootprintLibrary.3dshapes/TS11-674-105-BK-260-RA-D.step"
+		(offset
+			(xyz 0 -2.05 4)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
 )
