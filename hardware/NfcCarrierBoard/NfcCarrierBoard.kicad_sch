@@ -5,7 +5,7 @@
 	(uuid "766243a7-ad3d-48cd-bfed-d2ecca850827")
 	(paper "A4")
 	(title_block
-		(title "${TITLE}")
+		(title "${PROJECT_TITLE}")
 		(date "${DATE}")
 		(rev "${REVISION}")
 		(company "${COMPANY}")
@@ -6100,6 +6100,12 @@
 		(uuid "d77414a2-b73a-4512-8217-958f4d1a5152")
 	)
 	(junction
+		(at 158.75 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "de989c3d-07b5-4ea9-aad4-d1933a370506")
+	)
+	(junction
 		(at 54.61 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6373,6 +6379,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 130.81) (xy 158.75 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22b098cc-16ba-45f0-9d49-759cc5249353")
+	)
+	(wire
+		(pts
 			(xy 162.56 180.34) (xy 160.02 180.34)
 		)
 		(stroke
@@ -6590,6 +6606,16 @@
 			(type default)
 		)
 		(uuid "3bf60668-3649-42fd-85a9-2f7b1b481d42")
+	)
+	(wire
+		(pts
+			(xy 158.75 132.08) (xy 160.02 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cb6fa88-2929-48fe-9a16-c6e5ef70a059")
 	)
 	(wire
 		(pts
@@ -7620,6 +7646,16 @@
 			(type default)
 		)
 		(uuid "c8c46fd5-9db9-49e3-92ef-dd6d4a431ec2")
+	)
+	(wire
+		(pts
+			(xy 157.48 132.08) (xy 158.75 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c969fa31-b1bf-43f3-8914-5e4d79f00be9")
 	)
 	(wire
 		(pts
@@ -12593,7 +12629,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 156.21 129.54 90)
+		(at 160.02 132.08 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12601,7 +12637,7 @@
 		(dnp no)
 		(uuid "6b209839-d019-494e-956c-31d753388a51")
 		(property "Reference" "#PWR053"
-			(at 162.56 129.54 0)
+			(at 166.37 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12610,7 +12646,7 @@
 			)
 		)
 		(property "Value" "Heatsink"
-			(at 150.622 132.334 90)
+			(at 154.432 134.874 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12619,7 +12655,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 156.21 129.54 0)
+			(at 160.02 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12628,7 +12664,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 156.21 129.54 0)
+			(at 160.02 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12637,7 +12673,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 156.21 129.54 0)
+			(at 160.02 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13718,7 +13754,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 156.21 129.54 90)
+		(at 157.48 132.08 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13726,7 +13762,7 @@
 		(dnp no)
 		(uuid "95c06ad5-9441-40bf-aa0a-a2109270bc78")
 		(property "Reference" "HS1"
-			(at 148.59 129.54 90)
+			(at 149.86 132.08 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13735,7 +13771,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 152.908 127 90)
+			(at 154.178 129.54 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13744,7 +13780,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 156.21 124.46 0)
+			(at 157.48 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13753,7 +13789,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.21 124.46 0)
+			(at 157.48 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13762,7 +13798,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 156.21 129.54 0)
+			(at 157.48 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17105,6 +17141,72 @@
 			(project ""
 				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
 					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 158.75 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f9947c7e-5cde-4a0e-bc40-7b1ceb26bbde")
+		(property "Reference" "#FLG04"
+			(at 158.75 128.905 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 164.338 133.858 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 158.75 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 158.75 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "74ca56bb-28d1-4d53-9ae1-b2eab31d7140")
+		)
+		(instances
+			(project "NfcCarrierBoard"
+				(path "/766243a7-ad3d-48cd-bfed-d2ecca850827"
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)

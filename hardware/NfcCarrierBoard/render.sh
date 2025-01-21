@@ -47,7 +47,9 @@ fi
 # Bundle into zip file for DirtyPCBs
 zip -r9 "${OUTPUT}/${PROJECT}_${DATETIME_FN}_${VERSION}.zip" "${GERBER_STAGING}"
 
-kicad-cli sch erc --output="${OUTPUT}/schematic-erc.json" "${KICAD_DEFINES[@]}" ${PROJECT}.kicad_sch --severity-error --severity-warning --format=json
+kicad-cli sch erc --output="${OUTPUT}/schematic-erc.json" "${KICAD_DEFINES[@]}" "${PROJECT}.kicad_sch" --severity-error --severity-warning --format=json
 # jq 'del(.sheets[].violations[]|select(.excluded==true))' "${OUTPUT}/schematic-erc.json"
 
 kicad-cli pcb drc --output="${OUTPUT}/pcb-drc.json" "${KICAD_DEFINES[@]}" "${PCB_FILE}" --severity-error --severity-warning --format=json
+
+kicad-cli sch export svg --output="${OUTPUT}" "${KICAD_DEFINES[@]}" "${PROJECT}.kicad_sch"
