@@ -11,3 +11,4 @@ _autosave-*
 *.rpt
 *.png
 output/
+gerber/
