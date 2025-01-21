@@ -7330,6 +7330,7 @@
 		)
 	)
 	(footprint "Connector_BarrelJack:BarrelJack_Horizontal"
+		(locked yes)
 		(layer "F.Cu")
 		(uuid "9059eda9-3e15-42f5-ab51-e5146b7d50a3")
 		(at 166.75 61.47 -90)
@@ -7403,18 +7404,8 @@
 		(sheetfile "NfcCarrierBoard.kicad_sch")
 		(attr through_hole)
 		(fp_line
-			(start -13.8 4.6)
-			(end -13.8 -4.6)
-			(stroke
-				(width 0.15)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "6c54235a-4737-48bb-ade9-9a939f7c5cc7")
-		)
-		(fp_line
 			(start -5 4.6)
-			(end -13.8 4.6)
+			(end -10.8 4.6)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -7453,7 +7444,7 @@
 			(uuid "4863a502-ac37-45dc-b59e-4a82c60c16da")
 		)
 		(fp_line
-			(start -13.8 -4.6)
+			(start -10.8 -4.6)
 			(end 0.9 -4.6)
 			(stroke
 				(width 0.15)
@@ -10853,6 +10844,7 @@
 		)
 	)
 	(footprint "Module:Adafruit_Feather"
+		(locked yes)
 		(layer "F.Cu")
 		(uuid "c5ac2604-7bca-4edb-99e0-1d486bfec833")
 		(at 127.5 54.47)
@@ -10947,16 +10939,6 @@
 			(uuid "998f5c57-0b3f-4989-84da-6cab0a397636")
 		)
 		(fp_line
-			(start 19.05 -6.46)
-			(end 1.27 -6.46)
-			(stroke
-				(width 0.15)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "92783be8-afef-4f23-a4d4-a297ae82c08b")
-		)
-		(fp_line
 			(start 19.05 44.56)
 			(end 1.27 44.56)
 			(stroke
@@ -10977,17 +10959,6 @@
 			(uuid "6bd9390a-728f-4958-b786-4d5c3a49fe0f")
 		)
 		(fp_arc
-			(start -1.38 -3.81)
-			(mid -0.603833 -5.683833)
-			(end 1.27 -6.46)
-			(stroke
-				(width 0.15)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "0c94b4d9-0cd6-4bf7-9eec-cb6762a90273")
-		)
-		(fp_arc
 			(start 1.27 44.56)
 			(mid -0.603833 43.783833)
 			(end -1.38 41.91)
@@ -10997,17 +10968,6 @@
 			)
 			(layer "F.SilkS")
 			(uuid "90c9cd56-45a3-4537-a220-cda336739216")
-		)
-		(fp_arc
-			(start 19.05 -6.46)
-			(mid 20.923833 -5.683833)
-			(end 21.7 -3.81)
-			(stroke
-				(width 0.15)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "ce56ac61-c369-4662-a9ff-fad52a9290c8")
 		)
 		(fp_arc
 			(start 21.7 41.91)

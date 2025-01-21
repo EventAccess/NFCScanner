@@ -13023,7 +13023,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey PN" "2223-TS11-674-105-BK-260-RA-D-ND"
+		(property "DigiKey" "2223-TS11-674-105-BK-260-RA-D-ND"
 			(at 205.74 139.7 0)
 			(effects
 				(font
