@@ -57,7 +57,7 @@ kicad-cli pcb drc --output="${OUTPUT}/pcb-drc.json" "${KICAD_DEFINES[@]}" "${PCB
 
 # Render schematic
 kicad-cli sch export svg --output="${OUTPUT}" "${KICAD_DEFINES[@]}" "${PROJECT}.kicad_sch"
-kicad-cli sch export pdf --output="${OUTPUT}" "${KICAD_DEFINES[@]}" "${PROJECT}.kicad_sch"
+kicad-cli sch export pdf --output="${OUTPUT}/${PROJECT}.pdf" "${KICAD_DEFINES[@]}" "${PROJECT}.kicad_sch"
 
 # Output BOM
 # TODO: Populate relevant schematic part fields
