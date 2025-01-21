@@ -37,8 +37,9 @@ mkdir -p "${GERBER_STAGING}" "${OUTPUT}"
 kicad-cli pcb export gerbers --output="${GERBER_STAGING}" --layers=F.Cu,B.Cu,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts "${KICAD_DEFINES[@]}" "${PCB_FILE}"
 kicad-cli pcb export drill --format=excellon --output="${GERBER_STAGING}" "${PCB_FILE}"
 # Website specifies txt, then mentions dri further down - rename to txt
-cp "${GERBER_STAGING}"/${PROJECT}{.drl,-excellon-drl.txt}
-cp "${GERBER_STAGING}"/${PROJECT}-Edge_Cuts.gm{1,l}
+mv "${GERBER_STAGING}"/${PROJECT}{.drl,-excellon-drl.txt}
+mv "${GERBER_STAGING}"/${PROJECT}-Edge_Cuts.gm{1,l}
+sed -i -e 's/-Edge_Cuts.gm1/-Edge_Cuts.gml/g' "${GERBER_STAGING}"/${PROJECT}-job.gbrjob
 
 
 # Include list of new/changed files when dirty
