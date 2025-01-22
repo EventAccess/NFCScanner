@@ -260,6 +260,45 @@
 				)
 			)
 		)
+		(property "DigiKey" "1655-SL54ACT-ND"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fff0ac1a-73fe-4950-8f5b-93b1d457429c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "SMC Diode Solutions"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b4945f35-2ecb-441c-a14b-9d7f6d5cd0b9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "SL54A"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fce98c80-7d0c-4daf-9833-b481a9266c67")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/46f70aee-5831-4712-81e7-cd5303b6df53")
 		(sheetname "Root")
@@ -534,6 +573,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "56ccbd54-3c46-41d6-944e-081f0ffc9cba")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/b4686e09-408e-495c-a4cf-64e03461ee0f")
 		(sheetname "Root")
@@ -647,6 +699,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "96f42c9a-bee9-47a2-ae3c-69a96694af3b")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -767,6 +832,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bfd59919-edf7-467f-a15a-9661b8c39b66")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/95c06ad5-9441-40bf-aa0a-a2109270bc78")
 		(sheetname "Root")
@@ -873,11 +951,24 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e7733168-e78a-43a1-86f4-b62194746eb6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/5ad4f03d-1a3b-44f0-a854-2528739a6063")
 		(sheetname "Root")
 		(sheetfile "NfcCarrierBoard.kicad_sch")
-		(attr through_hole)
+		(attr through_hole dnp)
 		(fp_line
 			(start -1.33 -1.33)
 			(end 0 -1.33)
@@ -1160,12 +1251,25 @@
 				)
 			)
 		)
-		(property "DigiKey PN" "2223-TS11-674-105-BK-260-RA-D-ND"
+		(property "DigiKey" "2223-TS11-674-105-BK-260-RA-D-ND"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7d84ca2e-88de-450a-a111-6cd245ed87dd")
+			(uuid "d8385907-a3cd-4c1e-9d4c-b8ac184a1108")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "31e7fe01-2d76-439c-b72d-0851f9fdb28f")
 			(effects
 				(font
 					(size 1 1)
@@ -1606,6 +1710,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "883f99de-7413-4e8e-a2cb-57924177e04f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "MountingHole*")
 		(path "/17baf0ce-faf5-444a-b037-b005adf5c0f4")
 		(sheetname "Root")
@@ -1714,6 +1831,45 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d5b70d7b-bd80-4cc8-be36-1f969095d42b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1655-SL54ACT-ND"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9fc7cf4f-12e4-4522-ab1d-c6b33169b4cd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "SMC Diode Solutions"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3132d70e-bde5-4140-8608-a6ac4d9fa614")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "SL54A"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f92373ee-32b1-497b-8977-6d405ccd7490")
 			(effects
 				(font
 					(size 1 1)
@@ -1996,6 +2152,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "42a7459d-468f-44f5-980b-f2f2644fb5fd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/5f650897-2769-478b-b1bc-6d047fec3fb3")
 		(sheetname "Root")
@@ -2255,7 +2424,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "GROVE 2MM 4PIN VERT CONN 10PCS"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2264,6 +2433,45 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1597-1082-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "be991d8b-5b9c-45a5-b399-4dea6de86ba6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "Seeed Technology Co., Ltd"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6c8e4c6d-9177-4505-afda-8d6ccd8fbbde")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "110990030"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a04fe839-1b81-4da0-8f75-f2778c0fd677")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -2609,6 +2817,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e1cab96c-618f-4859-816a-16c5bd384d7e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/c7be5dc7-bf16-46fe-acd7-dd3e7f890086")
 		(sheetname "Root")
@@ -2881,6 +3102,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c35a2960-0886-4328-b061-bc464dcc4533")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "SolderJumper*Bridged*")
 		(path "/3c652214-fde1-46af-81b4-fd701ef96c01")
 		(sheetname "Root")
@@ -3115,7 +3349,7 @@
 				)
 			)
 		)
-		(property "Value" "24AA02E-OT"
+		(property "Value" "24AA02E48T"
 			(at 0 2.4 90)
 			(layer "F.Fab")
 			(uuid "510d2990-dab2-463c-b423-6c0a20d1b8f8")
@@ -3158,6 +3392,45 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "24AA02E48T-I/OTCT-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "296c8e67-9dd2-4275-a32c-65c4ad59467d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "Microchip Technology"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a8fa47c5-c755-4e28-8c78-c0c3f0f49edc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "24AA02E48T-I/OT"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f638cf4f-2a3b-476f-a72f-f3fcce283f44")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -3450,6 +3723,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7e9e4fd0-0c99-46d6-8691-af53d7456c2c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/f015201a-992c-48a1-b32b-397157915604")
 		(sheetname "Root")
@@ -3553,7 +3839,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "GROVE 2MM 4PIN VERT CONN 10PCS"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3562,6 +3848,45 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1597-1082-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fb1999ab-219d-4f47-bbc7-116b181b2b7c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "Seeed Technology Co., Ltd"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8a2342c9-a47b-406d-b75e-1bf0e7223666")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "110990030"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fabe1631-8c27-4f63-b9bb-3d5ff789890c")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -3906,6 +4231,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bc260f4b-c3f9-4096-ab17-3d6117f76827")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "SolderJumper*Bridged*")
 		(path "/65efbba4-c4d9-4064-adc3-e63bb7e238fa")
 		(sheetname "Root")
@@ -4190,12 +4528,25 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4e0c4331-6aee-4378-b8fe-f2891d5230f0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "SolderJumper*Open*")
 		(path "/2644b8b4-e38d-49b7-8e95-6403c570a765")
 		(sheetname "Root")
 		(sheetfile "NfcCarrierBoard.kicad_sch")
 		(zone_connect 1)
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files exclude_from_bom dnp)
 		(fp_line
 			(start -1.4 0.3)
 			(end -1.4 -0.3)
@@ -4455,6 +4806,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7fbc9226-6b31-41ed-9468-d7d655a2212c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "acd13bb5-d1a4-44bf-bda4-7864bb0d9792")
 			(effects
 				(font
 					(size 1 1)
@@ -4730,6 +5094,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0dca2710-eaef-4ebb-9667-1fbc4b153745")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -5220,6 +5597,32 @@
 				)
 			)
 		)
+		(property "MFN" "SparkFun Electronics"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "220f4418-97ad-4f78-b602-f1da934a068d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "COM-21256"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1ea16d28-9e5a-4418-a1b2-2cf96bb167a4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/cc933e26-f3d5-4dde-9d7a-5af0e75b01b3")
 		(sheetname "Root")
 		(sheetfile "NfcCarrierBoard.kicad_sch")
@@ -5402,6 +5805,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "360e5c83-6abd-40db-958a-ac83e56b0e04")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aac191f4-3696-4be0-b732-50aae3ae59aa")
 			(effects
 				(font
 					(size 1 1)
@@ -5682,6 +6098,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7454afd5-3f52-446c-aa47-bef0c05a17e5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/c7fc7056-6794-48a6-bf38-8f13531a72ec")
 		(sheetname "Root")
@@ -5950,6 +6379,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "75227bb5-2f22-4fd6-9b09-0aeacd6d3790")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -6316,6 +6758,45 @@
 				)
 			)
 		)
+		(property "MFN" "onsemi"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6666624d-3de5-415d-9160-2182db1b880b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "BSS138KCT-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ed4ec82b-4b01-4afb-9e38-f5924947efd3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "BSS138K"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "78d322ee-d333-4bfb-bb1e-4cff81fb5aae")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/f694e66b-43f3-4906-aa98-9398f6f34311")
 		(sheetname "Root")
 		(sheetfile "NfcCarrierBoard.kicad_sch")
@@ -6570,12 +7051,51 @@
 				)
 			)
 		)
-		(property "Description" "Buzzer, polarized"
+		(property "Description" "Buzzers Transducer, Externally Driven Electromechanical/Magnetic 5 V 40mA 2.4kHz 87dB @ 5V, 10cm Through Hole PC Pins"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3bf16628-02cf-422b-aabc-3508c6a1960d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "668-1470-ND"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e018b712-3b5f-4bd9-a733-783dfd2a6a0c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "PUI Audio, Inc."
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6ff177ea-d297-4abb-8a71-564a3e61d3a4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "AT-1224-TWT-5V-2-R"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "29b1a8b7-6dd7-4576-8dd7-cd85b885651f")
 			(effects
 				(font
 					(size 1 1)
@@ -6730,6 +7250,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1732975f-7b1d-48f2-a5f4-d9f8498e8bdf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8ec337a5-c0e9-4f1c-8a02-4c19919d9a90")
 			(effects
 				(font
 					(size 1 1)
@@ -7010,6 +7543,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8b60280f-7c8f-4a4d-b00b-5bbbb28ddedc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/16383161-29f6-4f8a-bdfb-f78a41d4617a")
 		(sheetname "Root")
@@ -7283,6 +7829,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f0756d43-22be-4d96-84e5-727360a394c9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "MountingHole*")
 		(path "/a7d8840e-52dc-4a14-a830-759663d8e5bf")
 		(sheetname "Root")
@@ -7394,6 +7953,45 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "CP-002AH-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "12c50ab6-4a06-4fe3-bf8e-abdd44f41c5a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "Same Sky (Formerly CUI Devices)"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "930f048f-6883-4dd7-ac9f-5f3b41dc0891")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "PJ-002AH"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c6aab92c-cfab-4c6a-a433-c3dee624d2b8")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -7786,11 +8384,24 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5ae8ef7a-a5f2-4884-a095-59bebfe5c5bf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/d692feb7-aebc-4b2b-9d4c-79edd9a05b3d")
 		(sheetname "Root")
 		(sheetfile "NfcCarrierBoard.kicad_sch")
-		(attr through_hole)
+		(attr through_hole dnp)
 		(fp_line
 			(start -1.33 -1.33)
 			(end 0 -1.33)
@@ -8115,6 +8726,45 @@
 				)
 			)
 		)
+		(property "MFN" "onsemi"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3ea84362-cf8b-4c88-9472-99a7361af5a9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "BSS138KCT-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "54238253-b3f1-489e-baef-371cc92c04fb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "BSS138K"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "499b4c8e-39d6-40b7-8ce0-e2d27316e966")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/8e4a2ea9-6192-41c6-a65f-7810d3273175")
 		(sheetname "Root")
 		(sheetfile "NfcCarrierBoard.kicad_sch")
@@ -8376,6 +9026,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b20ef1bf-da14-43cd-a85e-1e4cea8212fd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "86845235-5fc7-406f-8357-2b0f39188876")
 			(effects
 				(font
 					(size 1 1)
@@ -8656,6 +9319,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d0f22530-1b34-4aa9-82e8-97fc64f005e6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/c5d85d1d-4e24-4118-af3d-b6d77044bec9")
 		(sheetname "Root")
@@ -8922,6 +9598,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5dce8264-4e65-471d-9119-f79d42109c4b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b74185e9-379a-4a60-ada0-07e4db5e5dfd")
 			(effects
 				(font
 					(size 1 1)
@@ -9202,6 +9891,45 @@
 				)
 			)
 		)
+		(property "DigiKey" "455-BM04B-SRSS-TBCT-ND"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "37fa4997-a274-4903-bc5f-89a8adee7271")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "JST Sales America Inc."
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b1db10c4-2943-42be-8a23-533cff7fa141")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "BM04B-SRSS-TB"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "626f243f-53f6-4b5d-9623-94a0004cd01d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/b71f2ca0-fcef-4ee3-a57e-2a8a491e54d6")
 		(sheetname "Root")
@@ -9428,6 +10156,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "603769df-64ab-41dd-be99-22740cec165f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f8e37165-9a98-4364-b800-4cc140dd000c")
 			(effects
 				(font
 					(size 1 1)
@@ -9694,7 +10435,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "W5500 Ethernet Interface Feather Platform Evaluation Expansion Board"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9703,6 +10444,45 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1528-1725-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bf7a2015-1494-49f7-91e6-ea3497d95450")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "Adafruit Industries LLC"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a4776551-dae8-4c4a-a17e-580692028d67")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "3201"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "85da3ab0-78d4-4a6f-993f-11d1d1f5133c")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -10524,6 +11304,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0a35c9b2-3d55-4d7f-abf6-33fed79ba350")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "MountingHole*")
 		(path "/e47c0d06-ea95-4c82-b526-3425e3440037")
 		(sheetname "Root")
@@ -10632,6 +11425,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0a260862-c7a2-454c-9795-6779e8d58885")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6bf57c2f-f573-461a-a02a-66aa47666b8d")
 			(effects
 				(font
 					(size 1 1)
@@ -10908,6 +11714,32 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "iLabs"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bedf45cf-8f24-40a1-9254-06edd666a663")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "98-00241-2"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "468f50af-dc73-4359-9524-aadea30fb142")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -11625,6 +12457,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b7b29522-d913-455e-99c6-652b502387a1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/63910698-c333-426a-a532-c565c008f16f")
 		(sheetname "Root")
@@ -11884,7 +12729,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "3-pin female 0.1\" header"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11893,6 +12738,45 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "S7036-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cb1a479d-e68f-4d4a-aa11-c4eda5742060")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "Sullins Connector Solutions"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5d6b3b82-9d5b-4465-9fe6-f299625451a3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "PPPC031LFBN-RC"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "928565c6-26d4-4557-9a7c-1592287a7a1a")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -12177,6 +13061,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "705b1176-fd36-4646-8fd5-d71f846f0e0a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/e5e294b9-795f-44c8-b1fd-019eacaba2e2")
 		(sheetname "Root")
@@ -12449,6 +13346,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f92e48de-d695-4541-baab-bdd68c10f806")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/5fbfd771-e5dc-46dd-b87e-b1eece4b8580")
 		(sheetname "Root")
@@ -12559,6 +13469,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "08fd33dd-2add-43d4-8a13-029b6ebb9660")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b247dc0a-dbe6-4556-a271-0fed2305073a")
 			(effects
 				(font
 					(size 1 1)
@@ -12839,6 +13762,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e8302b2d-f8ee-4151-845a-41148adeefeb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/cad38e1a-4cbc-4062-8484-1aac42e4180b")
 		(sheetname "Root")
@@ -13107,6 +14043,45 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1568-COM-16347CT-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "84e6a782-c373-46d9-97c2-62313179a5d7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" "Worldsemi"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0abd88c5-dc14-4f8f-98c2-70b635dace04")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "WS2812B"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cfa37aa4-943f-4e28-a3ef-bb9f42c4fb82")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -13432,6 +14407,19 @@
 				)
 			)
 		)
+		(property "MFN" ""
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "31e58621-61db-4d77-948d-d122e92cb535")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/a125e719-a534-4179-8585-ae9bc391007f")
 		(sheetname "Root")
@@ -13698,6 +14686,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "77ac2b49-3366-4c59-9063-a7ed3808db56")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "30d59d2e-c15a-430d-aefc-11d79fc1edc1")
 			(effects
 				(font
 					(size 1 1)
@@ -13978,6 +14979,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MFN" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "20981f83-f083-40f7-8139-b47457dbc0a6")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
