@@ -33,10 +33,10 @@ DATETIME_FN="${DATETIME_FN// /-}"
 rm -rv "${GERBER_STAGING}" "${OUTPUT}"
 mkdir -p "${GERBER_STAGING}" "${OUTPUT}"
 
-# Generate files for DirtyPCBs
+# Generate drill and gerbers
 kicad-cli pcb export gerbers --output="${GERBER_STAGING}" --layers=F.Cu,B.Cu,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts "${KICAD_DEFINES[@]}" "${PCB_FILE}"
 kicad-cli pcb export drill --format=excellon --output="${GERBER_STAGING}" "${PCB_FILE}"
-# Website specifies txt, then mentions dri further down - rename to txt
+# DirtyPCBs website specifies txt, then mentions dri further down - rename to txt
 mv "${GERBER_STAGING}"/${PROJECT}{.drl,-excellon-drl.txt}
 mv "${GERBER_STAGING}"/${PROJECT}-Edge_Cuts.gm{1,l}
 sed -i -e 's/-Edge_Cuts.gm1/-Edge_Cuts.gml/g' "${GERBER_STAGING}"/${PROJECT}-job.gbrjob
@@ -47,8 +47,8 @@ if [[ "${VERSION}" == *"dirty" ]]; then
     git status --porcelain --untracked=all --ignored=no --find-renames > "${GERBER_STAGING}"/git-status.info
 fi
 
-# Bundle into zip file for DirtyPCBs
-zip -r9 "${OUTPUT}/${PROJECT}_${DATETIME_FN}_${VERSION}_DirtyPCBs.zip" "${GERBER_STAGING}"
+# Bundle into zip file
+zip -r9 "${OUTPUT}/${PROJECT}_${DATETIME_FN}_${VERSION}.zip" "${GERBER_STAGING}"
 
 # Output KiCad linting errors
 kicad-cli sch erc --output="${OUTPUT}/schematic-erc.json" "${KICAD_DEFINES[@]}" "${PROJECT}.kicad_sch" --severity-error --severity-warning --format=json
