@@ -61,4 +61,4 @@ kicad-cli sch export pdf --output="${OUTPUT}/${PROJECT}.pdf" "${KICAD_DEFINES[@]
 
 # Output BOM
 # TODO: Populate relevant schematic part fields
-kicad-cli sch export bom --output="${OUTPUT}"/${PROJECT}-BOM.csv ${PROJECT}.kicad_sch --fields 'MPN,DigiKey,${QUANTITY},Reference,Value' --labels='MPN,DigiKey,Qty,Refs,Value' --exclude-dnp
+kicad-cli sch export bom --output="${OUTPUT}"/${PROJECT}-BOM.csv ${PROJECT}.kicad_sch --fields 'MPN,DigiKey,${QUANTITY},MFN,Reference,Value,Description,Footprint' --labels='MPN,DigiKey,Qty,MFN,Refs,Value,Description,Footprint' --exclude-dnp --group-by='DigiKey,MPN,MFN'
