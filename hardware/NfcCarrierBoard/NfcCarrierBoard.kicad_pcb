@@ -586,11 +586,37 @@
 				)
 			)
 		)
+		(property "DigiKey" "-"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "476edac0-9f04-4aa6-956f-84a63b8679a7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "-"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3c799bdc-72bf-40d8-b776-dce5eacdc8a4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/b4686e09-408e-495c-a4cf-64e03461ee0f")
 		(sheetname "Root")
 		(sheetfile "NfcCarrierBoard.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 0 1.2)
@@ -709,6 +735,32 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "96f42c9a-bee9-47a2-ae3c-69a96694af3b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c4abef09-4773-4174-bfb9-e90e3e514401")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c90c2317-866d-44da-9502-db5adc55c855")
 			(effects
 				(font
 					(size 1 1)
@@ -845,11 +897,37 @@
 				)
 			)
 		)
+		(property "DigiKey" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e7aadb38-d384-40c2-8ac1-713370f8939e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f3abd0d5-3053-43c0-b90b-0b49fff7f217")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/95c06ad5-9441-40bf-aa0a-a2109270bc78")
 		(sheetname "Root")
 		(sheetfile "NfcCarrierBoard.kicad_sch")
-		(attr exclude_from_pos_files allow_missing_courtyard)
+		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(fp_circle
 			(center 0 0)
 			(end 0.73 0.01)
@@ -1723,6 +1801,32 @@
 				)
 			)
 		)
+		(property "DigiKey" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "432e4e6e-cb05-4f87-851a-d311bb083413")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "41441490-eeca-4f27-b34e-49ae7f9f793a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "MountingHole*")
 		(path "/17baf0ce-faf5-444a-b037-b005adf5c0f4")
 		(sheetname "Root")
@@ -2139,7 +2243,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "1-Wire data pin pull-up"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2152,12 +2256,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Stackpole Electronics Inc"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "42a7459d-468f-44f5-980b-f2f2644fb5fd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "RMCF0805FT4K70CT-ND"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "725928f7-90e6-493b-b8dc-da1cc0f40742")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RMCF0805FT4K70"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0d5f98a3-6320-4bf8-9f14-e938830cd4b4")
 			(effects
 				(font
 					(size 1 1)
@@ -2804,7 +2934,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Decopuling; note! DC bias voltage derating"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2817,12 +2947,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Samsung Electro-Mechanics"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e1cab96c-618f-4859-816a-16c5bd384d7e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1276-1942-1-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "12bb5ca0-9be4-4903-b9d1-8de50576bd2a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL10B105KA8NFNC"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c30f755c-9216-49fa-b205-f1a60a7afd27")
 			(effects
 				(font
 					(size 1 1)
@@ -3736,11 +3892,37 @@
 				)
 			)
 		)
+		(property "DigiKey" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "29216e13-3926-461b-b29e-29d03c080cfd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e5bec5bc-72e6-4623-84c0-6f4a49e1eddf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/f015201a-992c-48a1-b32b-397157915604")
 		(sheetname "Root")
 		(sheetfile "NfcCarrierBoard.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 0 1.2)
@@ -4800,7 +4982,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Decopuling; note! DC bias voltage derating"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4813,12 +4995,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Samsung Electro-Mechanics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "acd13bb5-d1a4-44bf-bda4-7864bb0d9792")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1276-1942-1-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "72c13445-e324-45ae-a684-db8c06e988e7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL10B105KA8NFNC"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8a9ed27f-8726-4769-9d6a-ee9cf1be1a76")
 			(effects
 				(font
 					(size 1 1)
@@ -5104,6 +5312,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0dca2710-eaef-4ebb-9667-1fbc4b153745")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "-"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b3d996c2-29be-4847-9b14-8d74d785ed7e")
 			(effects
 				(font
 					(size 1 1)
@@ -5799,7 +6020,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Decopuling; note! DC bias voltage derating"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5812,12 +6033,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Samsung Electro-Mechanics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "aac191f4-3696-4be0-b732-50aae3ae59aa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1276-1942-1-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c4ee1cc2-02f4-474b-9f44-3f96a839555f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL10B105KA8NFNC"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ffee09c4-8329-4afd-bd54-c6b86886489d")
 			(effects
 				(font
 					(size 1 1)
@@ -6085,7 +6332,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "NMOS/NPN input current limiting resistor"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6098,12 +6345,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Stackpole Electronics Inc"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7454afd5-3f52-446c-aa47-bef0c05a17e5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "RMCF0805FT330RCT-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e56e98da-2232-4b0c-9b49-985483888f64")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RMCF0805FT330R"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bc3b2294-132a-4661-8b67-e517bfd2af17")
 			(effects
 				(font
 					(size 1 1)
@@ -7244,7 +7517,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Decopuling"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7257,12 +7530,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Samsung Electro-Mechanics"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8ec337a5-c0e9-4f1c-8a02-4c19919d9a90")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1276-3100-1-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d66a9ee5-786d-49bb-b4b2-f5ad31c7ebdb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL31B106KAHNFNE"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "19394be6-6c0f-46ae-85f5-24acf202adcc")
 			(effects
 				(font
 					(size 1 1)
@@ -7530,7 +7829,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "~10kΩ pull-up/down"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7543,12 +7842,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Stackpole Electronics Inc"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8b60280f-7c8f-4a4d-b00b-5bbbb28ddedc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "RMCF0805FT10K0CT-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b1c672b7-6397-4333-9700-b86ea1a821da")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RMCF0805FT10K0"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4fb2599b-f28d-4721-817d-5a7fcf695348")
 			(effects
 				(font
 					(size 1 1)
@@ -7835,6 +8160,32 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f0756d43-22be-4d96-84e5-727360a394c9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5ceda81f-ecd0-45ea-a583-4ef82bdd1bf2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e563382a-e8cc-48b6-92a0-b3f9c62b8294")
 			(effects
 				(font
 					(size 1 1)
@@ -8982,7 +9333,7 @@
 				)
 			)
 		)
-		(property "Value" "~10kΩ"
+		(property "Value" "10kΩ"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9020,7 +9371,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "~10kΩ pull-up/down"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9033,12 +9384,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Stackpole Electronics Inc"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "86845235-5fc7-406f-8357-2b0f39188876")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "RMCF0805FT10K0CT-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e9ee9459-6575-4c22-92d4-1b6d88e488f1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RMCF0805FT10K0"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8adca6a8-04b2-4ba4-8361-a4d41b29fb7a")
 			(effects
 				(font
 					(size 1 1)
@@ -9306,7 +9683,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "~10kΩ pull-up/down"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9319,12 +9696,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Stackpole Electronics Inc"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d0f22530-1b34-4aa9-82e8-97fc64f005e6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "RMCF0805FT10K0CT-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ae55f840-f225-4b15-88db-704d1db7f99d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RMCF0805FT10K0"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "97ad71a6-f516-4ef7-8890-9572e310680d")
 			(effects
 				(font
 					(size 1 1)
@@ -9592,7 +9995,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "~10kΩ pull-up/down"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9605,12 +10008,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Stackpole Electronics Inc"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b74185e9-379a-4a60-ada0-07e4db5e5dfd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "RMCF0805FT10K0CT-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f6af871e-4ef5-4ce4-a25c-956dcb753794")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RMCF0805FT10K0"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "63ee1b0a-73a2-472d-80fd-d44e857fa864")
 			(effects
 				(font
 					(size 1 1)
@@ -10150,7 +10579,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Decopuling; note! DC bias voltage derating"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10163,12 +10592,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Samsung Electro-Mechanics"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f8e37165-9a98-4364-b800-4cc140dd000c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1276-1942-1-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dd224255-7359-4595-b9e5-573402a763e6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL10B105KA8NFNC"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1eff4d85-b577-491d-9a46-5fcac9e6ae5e")
 			(effects
 				(font
 					(size 1 1)
@@ -11317,6 +11772,32 @@
 				)
 			)
 		)
+		(property "DigiKey" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "72906ebb-b006-4d52-8a12-5a08ab6dacc7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "61111b88-c882-48e9-8fba-cad8abafd72d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "MountingHole*")
 		(path "/e47c0d06-ea95-4c82-b526-3425e3440037")
 		(sheetname "Root")
@@ -11419,7 +11900,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Decopuling; note! DC bias voltage derating"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11432,12 +11913,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Samsung Electro-Mechanics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6bf57c2f-f573-461a-a02a-66aa47666b8d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1276-1942-1-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6412d0a1-d38c-4be6-8f40-d17ef6fb4d67")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL10B105KA8NFNC"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dbaa219d-909a-469b-99d2-a20c3409ea0a")
 			(effects
 				(font
 					(size 1 1)
@@ -11737,6 +12244,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "468f50af-dc73-4359-9524-aadea30fb142")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "-"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c78f8d65-cf21-4d8d-8377-86945c8b49e0")
 			(effects
 				(font
 					(size 1 1)
@@ -12444,7 +12964,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "~10kΩ pull-up/down"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12457,12 +12977,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Stackpole Electronics Inc"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b7b29522-d913-455e-99c6-652b502387a1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "RMCF0805FT10K0CT-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "46b61149-0241-45e2-9ce9-7b374c338e5f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RMCF0805FT10K0"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e656e4e8-33cc-4d43-a2ae-b5be5262dd21")
 			(effects
 				(font
 					(size 1 1)
@@ -13048,7 +13594,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Decopuling; note! DC bias voltage derating"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13061,12 +13607,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Samsung Electro-Mechanics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "705b1176-fd36-4646-8fd5-d71f846f0e0a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1276-1942-1-ND"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "261ac9a7-dbca-4f35-94cd-23abeb30441f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL10B105KA8NFNC"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ae49d1cf-8d1f-4036-96cb-a55fc37a329a")
 			(effects
 				(font
 					(size 1 1)
@@ -13359,11 +13931,37 @@
 				)
 			)
 		)
+		(property "DigiKey" "-"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "120cc92c-ebb8-4a04-9160-3e0429cb3077")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "-"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3da5c7de-7e3f-4c16-868d-a3076f7d2594")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/5fbfd771-e5dc-46dd-b87e-b1eece4b8580")
 		(sheetname "Root")
 		(sheetfile "NfcCarrierBoard.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 0 1.2)
@@ -13463,7 +14061,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Decopuling; note! DC bias voltage derating"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13476,12 +14074,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Samsung Electro-Mechanics"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b247dc0a-dbe6-4556-a271-0fed2305073a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1276-1942-1-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e2004a11-2ca2-41fd-a7cc-5f4d7f0bf267")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL10B105KA8NFNC"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7d8190e9-850f-4ab6-b785-e307b091407a")
 			(effects
 				(font
 					(size 1 1)
@@ -13749,7 +14373,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "~10Ω resistor in power path; rate for buzzer max current draw @ 5V"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13762,12 +14386,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Vishay Dale"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e8302b2d-f8ee-4151-845a-41148adeefeb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "541-10.0TCT-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "915c19d8-61ae-4014-8810-f5622ba67c66")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CRCW080510R0FKEAHP"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bceedfb8-e227-4161-8355-1fa555a3cffa")
 			(effects
 				(font
 					(size 1 1)
@@ -14394,7 +15044,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Decopuling; note! DC bias voltage derating"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14407,12 +15057,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Samsung Electro-Mechanics"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "31e58621-61db-4d77-948d-d122e92cb535")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1276-1942-1-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3b56b7e2-5362-4162-bdb6-da0041c73bef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL10B105KA8NFNC"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2b7c6cf0-5aed-4cad-aa3c-2120c7e50d93")
 			(effects
 				(font
 					(size 1 1)
@@ -14680,7 +15356,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Decopuling; note! DC bias voltage derating"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14693,12 +15369,38 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Samsung Electro-Mechanics"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "30d59d2e-c15a-430d-aefc-11d79fc1edc1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey" "1276-1942-1-ND"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c51661af-eff0-4e3e-bbc4-e26687638636")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL10B105KA8NFNC"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cfb640f9-b12a-46cf-86dd-7df0a113818b")
 			(effects
 				(font
 					(size 1 1)
@@ -14990,6 +15692,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "20981f83-f083-40f7-8139-b47457dbc0a6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "DigiKey" "-"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ba4ea77b-8118-442c-9173-b882f101e363")
 			(effects
 				(font
 					(size 1 1)
