@@ -665,9 +665,9 @@
 				)
 			)
 			(pin input line
-				(at 12.7 1.27 180)
+				(at 12.7 3.81 180)
 				(length 2.54)
-				(name "SDO"
+				(name "SCK"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -682,10 +682,10 @@
 					)
 				)
 			)
-			(pin tri_state line
-				(at 12.7 -1.27 180)
+			(pin input line
+				(at 12.7 1.27 180)
 				(length 2.54)
-				(name "SDI"
+				(name "SDO"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -700,10 +700,10 @@
 					)
 				)
 			)
-			(pin input line
-				(at 12.7 3.81 180)
+			(pin tri_state line
+				(at 12.7 -1.27 180)
 				(length 2.54)
-				(name "SCK"
+				(name "SDI"
 					(effects
 						(font
 							(size 1.27 1.27)
