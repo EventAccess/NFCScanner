@@ -11,6 +11,8 @@
 #undef ERROR
 #include <Wire.h>
 
+#include <Adafruit_NeoPixel.h>
+
 
 #define PN7150_WIRE (Wire1)
 #define PN7150_IRQ (uint8_t)(9)
@@ -22,6 +24,8 @@
 Electroniccats_PN7150 nfc(PN7150_IRQ, PN7150_VEN, PN7150_ADDR, &PN7150_WIRE);
 String getHexRepresentation(const byte* data, const uint32_t numBytes);
 void displayCardInfo();
+
+Adafruit_NeoPixel neopixel(1, D13, NEO_GRB + NEO_KHZ800);
 
 
 byte mac[] = {
@@ -41,6 +45,11 @@ HttpClient http = HttpClient(ethernet, url.host(), url.port());
 IPAddress my_ip;
 
 void setup() {
+  neopixel.begin();
+  neopixel.setPixelColor(1, neopixel.Color(0, 100, 0));
+  neopixel.setBrightness(50);
+  neopixel.show();
+
 
   // start serial port:
   Serial.begin(115200);
