@@ -2866,15 +2866,15 @@
 			(pintype "passive")
 			(uuid "3ae07193-e65b-47be-ad85-880c1e545b02")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Connector.3dshapes/NS-Tech_Grove_1x04_P2mm_Vertical.wrl"
+		(model "${KIPRJMOD}/FootprintLibrary.3dshapes/Grove-Connector-standing.step"
 			(offset
-				(xyz 0 0 0)
+				(xyz -2.9 2 0)
 			)
 			(scale
-				(xyz 0.3937 0.3937 0.3937)
+				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 -90)
+				(xyz -90 0 90)
 			)
 		)
 	)
@@ -4333,15 +4333,15 @@
 			(pintype "passive")
 			(uuid "652bde27-3a7d-409a-aeff-9f082bc00687")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Connector.3dshapes/NS-Tech_Grove_1x04_P2mm_Vertical.wrl"
+		(model "${KIPRJMOD}/FootprintLibrary.3dshapes/Grove-Connector-standing.step"
 			(offset
-				(xyz 0 0 0)
+				(xyz -2.9 2 0)
 			)
 			(scale
-				(xyz 0.3937 0.3937 0.3937)
+				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 -90)
+				(xyz -90 0 90)
 			)
 		)
 	)
