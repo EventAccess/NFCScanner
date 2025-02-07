@@ -17,15 +17,15 @@
 #define PN7150_VEN (uint8_t)(12)
 #define PN7150_ADDR (uint8_t)(0x28)
 
+#define MAC_EEPROM_ADDR (uint8_t)(0x50)
+
 Electroniccats_PN7150 nfc(PN7150_IRQ, PN7150_VEN, PN7150_ADDR, &PN7150_WIRE);
 String getHexRepresentation(const byte* data, const uint32_t numBytes);
 void displayCardInfo();
 
-// assign a MAC address for the Ethernet controller.
-// fill in your address here:
-// TODO: Automatic MAC address configuration
+
 byte mac[] = {
-  0x98, 0x76, 0xB6, 0x12, 0xE9, 0x97
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 // Set the static IP address to use if the DHCP fails to assign
 IPAddress ip(192, 168, 42, 177);
@@ -41,14 +41,33 @@ HttpClient http = HttpClient(ethernet, url.host(), url.port());
 IPAddress my_ip;
 
 void setup() {
-  // You can use Ethernet.init(pin) to configure the CS pin
-  Ethernet.init(D10); // D10 challenger NFC marking == GPIO5, matches with FeatherWing Ethernet
 
   // start serial port:
   Serial.begin(115200);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
+  Serial.print("NFCScanner ");  // TODO: Print version
+  Serial.println();
+
+  // Read MAC address from EEPROM
+  Wire.begin();
+
+  Wire.beginTransmission(MAC_EEPROM_ADDR);
+  Wire.write(0xFA); // EUI-48 address location
+  Wire.endTransmission(false);
+
+  Wire.requestFrom(MAC_EEPROM_ADDR, 6);
+  size_t mac_bytes_read = 0;
+  if (Wire.available() > 0) {
+    mac_bytes_read = Wire.readBytes(mac, 6);
+  }
+
+  Serial.print("MAC: ");
+  Serial.println(getHexRepresentation(mac, 6));
+
+  // You can use Ethernet.init(pin) to configure the CS pin
+  Ethernet.init(D10); // D10 challenger NFC marking == GPIO5, matches with FeatherWing Ethernet
 
   // start the Ethernet connection:
   Serial.println("Initialize Ethernet with DHCP:");
