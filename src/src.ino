@@ -20,6 +20,7 @@
 #define PN7150_ADDR (uint8_t)(0x28)
 
 #define MAC_EEPROM_ADDR (uint8_t)(0x50)
+#define BUZZER_PIN (D5)
 
 Electroniccats_PN7150 nfc(PN7150_IRQ, PN7150_VEN, PN7150_ADDR, &PN7150_WIRE);
 String getHexRepresentation(const byte* data, const uint32_t numBytes);
@@ -273,6 +274,7 @@ void loop() {
 
 
   if (nfc.isTagDetected(5000)) {
+    tone(BUZZER_PIN, 2093, 250);
     displayCardInfo();
 
     // It can detect multiple cards at the same time if they use the same protocol
