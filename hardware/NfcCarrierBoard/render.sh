@@ -1,6 +1,9 @@
 #!/bin/bash
 set -ex
 
+echo -n "Using KiCad version "
+kicad-cli version
+
 PR_SHA_SHORT=$(git rev-parse --short --verify HEAD)
 
 # Get git tag, and massage into something semver-ish
@@ -62,3 +65,6 @@ kicad-cli sch export pdf --output="${OUTPUT}/${PROJECT}.pdf" "${KICAD_DEFINES[@]
 # Output BOM
 # TODO: Populate relevant schematic part fields
 kicad-cli sch export bom --output="${OUTPUT}"/${PROJECT}-BOM.csv ${PROJECT}.kicad_sch --fields 'MPN,DigiKey,${QUANTITY},MFN,Reference,Value,Description,Footprint' --labels='MPN,DigiKey,Qty,MFN,Refs,Value,Description,Footprint' --exclude-dnp --group-by='DigiKey,MPN,MFN'
+
+# Render STEP 3D model of board
+kicad-cli pcb export step --drill-origin --subst-models --output output/${PROJECT}.step ${PROJECT}.kicad_pcb
