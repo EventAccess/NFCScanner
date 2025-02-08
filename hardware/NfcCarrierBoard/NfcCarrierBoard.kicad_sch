@@ -10867,7 +10867,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
 			(at 186.69 77.47 0)
 			(effects
 				(font
@@ -16847,7 +16847,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "d692feb7-aebc-4b2b-9d4c-79edd9a05b3d")
 		(property "Reference" "J6"
 			(at 106.68 26.416 0)
