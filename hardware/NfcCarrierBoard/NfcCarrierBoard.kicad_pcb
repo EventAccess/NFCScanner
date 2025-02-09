@@ -5974,6 +5974,17 @@
 				(xyz 0 0 0)
 			)
 		)
+		(model "${KIPRJMOD}/FootprintLibrary.3dshapes/SparkFun_Buck_Regulator_AP63357DV-7_BabyBuck5V_boardonly.step"
+			(offset
+				(xyz 5.08 -5.08 2.54)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "FootprintLibrary:SMD_HANDSOLDER_UNIVERSAL_0603_0805_1206"
 		(layer "F.Cu")
