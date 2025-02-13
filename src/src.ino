@@ -1,3 +1,7 @@
+#ifndef NFCSCANNER_VERSION
+#define NFCSCANNER_VERSION "v0.0.0+unknown.manual"
+#endif
+
 #include <SPI.h>
 #include <Ethernet.h>
 #include <Dhcp.h>
@@ -49,6 +53,11 @@ IPAddress my_ip;
 void setup() {
   neopixel.begin();
   neopixel.setBrightness(50);
+
+  neopixel.clear();
+  neopixel.show();
+  delay(10);
+
   neopixel.fill(neopixel.Color(100, 0, 0));
   neopixel.show();
 
@@ -62,8 +71,8 @@ void setup() {
   neopixel.fill(neopixel.Color(100, 50, 0));
   neopixel.show();
 
-  Serial.print("NFCScanner ");  // TODO: Print version
-  Serial.println();
+  Serial.print("NFCScanner ");
+  Serial.println(NFCSCANNER_VERSION);
 
   // Read MAC address from EEPROM
   Wire.begin();
