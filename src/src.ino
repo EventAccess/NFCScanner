@@ -294,7 +294,7 @@ void loop() {
 
 
   // TODO: Currently waits out the timeout, fails, resets and *then* detects the tag
-  if (nfc.isTagDetected(5000)) {
+  if (nfc.isTagDetected(500)) {
     neopixel.fill(neopixel.Color(0, 0, 100));
     neopixel.show();
 
