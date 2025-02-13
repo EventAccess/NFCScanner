@@ -1,6 +1,9 @@
 #!/bin/bash
 set -ex
 
+echo -n "Using KiCad version "
+kicad-cli version
+
 PR_SHA_SHORT=$(git rev-parse --short --verify HEAD)
 
 # Get git tag, and massage into something semver-ish
@@ -62,3 +65,25 @@ kicad-cli sch export pdf --output="${OUTPUT}/${PROJECT}.pdf" "${KICAD_DEFINES[@]
 # Output BOM
 # TODO: Populate relevant schematic part fields
 kicad-cli sch export bom --output="${OUTPUT}"/${PROJECT}-BOM.csv ${PROJECT}.kicad_sch --fields 'MPN,DigiKey,${QUANTITY},MFN,Reference,Value,Description,Footprint' --labels='MPN,DigiKey,Qty,MFN,Refs,Value,Description,Footprint' --exclude-dnp --group-by='DigiKey,MPN,MFN'
+
+# Render STEP 3D model of board
+kicad-cli pcb export step --drill-origin --subst-models --output output/${PROJECT}.step ${PROJECT}.kicad_pcb
+
+# 3D Renders (color png) requires KiCAD v9
+function kicad-render {
+    docker run -it --rm -v "$(pwd):/workdir" -w /workdir kicad/kicad:nightly-full \
+        kicad-cli pcb render "$@"
+}
+
+kicad-render --output="${OUTPUT}"/${PROJECT}-render-top-3d.png "${KICAD_DEFINES[@]}" ${PROJECT}.kicad_pcb \
+  --quality=high --side=top --perspective --zoom=0.8 --pan=0,-0.6,0 --width=800 --height=1000 --light-camera=0.3
+
+kicad-render --output="${OUTPUT}"/${PROJECT}-render-45.png "${KICAD_DEFINES[@]}" ${PROJECT}.kicad_pcb \
+  --quality=high --rotate='320,0,135' --perspective --zoom=0.75 --pan=0,2,0 --width=1200 --height=1000 --light-camera=0.3
+
+kicad-render --output="${OUTPUT}"/${PROJECT}-render-back.png "${KICAD_DEFINES[@]}" ${PROJECT}.kicad_pcb --quality=high --side=back --zoom=2 --pan=0,-1.5,0 --width=2200 --height=1000 --light-camera=0.8
+kicad-render --output="${OUTPUT}"/${PROJECT}-render-left.png "${KICAD_DEFINES[@]}" ${PROJECT}.kicad_pcb --quality=high --side=left --zoom=2 --pan=0,-1.5,0 --width=2200 --height=1000 --light-camera=0.8
+kicad-render --output="${OUTPUT}"/${PROJECT}-render-right.png "${KICAD_DEFINES[@]}" ${PROJECT}.kicad_pcb --quality=high --side=right --zoom=2 --pan=0,-1.5,0 --width=2200 --height=1000 --light-camera=0.8
+kicad-render --output="${OUTPUT}"/${PROJECT}-render-front.png "${KICAD_DEFINES[@]}" ${PROJECT}.kicad_pcb --quality=high --side=front --zoom=2 --pan=0,-1.5,0 --width=2200 --height=1000 --light-camera=0.8
+kicad-render --output="${OUTPUT}"/${PROJECT}-render-top.png "${KICAD_DEFINES[@]}" ${PROJECT}.kicad_pcb  --quality=user --side=top --zoom=0.8 --pan=0,-0.3,0 --width=800 --height=1000 --light-top=0.7 --light-camera=0.2
+kicad-render --output="${OUTPUT}"/${PROJECT}-render-bottom.png "${KICAD_DEFINES[@]}" ${PROJECT}.kicad_pcb --quality=user --side=bottom --zoom=0.8 --pan=0,-0.3,0 --width=800 --height=1000 --light-bottom=0.7 --light-camera=0.2
