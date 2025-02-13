@@ -26,6 +26,11 @@ libraries:
     source: arduino
     version: "7.3.0"
 
+  - name: Adafruit NeoPixel
+    source: arduino
+    version: "1.12.4"
+
+
 cores:
   - id: rp2040:rp2040
     repository: https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json

@@ -14,9 +14,12 @@
                 "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/pico-sdk/src/rp2_common/*/include/",
                 "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/pico-sdk/src/rp2040/*/include/",
                 "/home/vscode/.arduino15/packages/rp2040/hardware/rp2040/4.0.2/variants/challenger_2040_nfc/",
-                "/home/vscode/Arduino/libraries/*/src/"
+                "/home/vscode/Arduino/libraries/*/src/",
+                "/home/vscode/Arduino/libraries/Adafruit_NeoPixel"
             ],
-            "defines": ["PICO_RP2040"],
+            "defines": [
+                "PICO_RP2040"
+            ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
             "cppStandard": "gnu++17",
