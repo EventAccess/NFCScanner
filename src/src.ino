@@ -1,3 +1,7 @@
+#ifndef NFCSCANNER_VERSION
+#define NFCSCANNER_VERSION "v0.0.0+unknown.manual"
+#endif
+
 #include <SPI.h>
 #include <Ethernet.h>
 #include <Dhcp.h>
@@ -11,6 +15,8 @@
 #undef ERROR
 #include <Wire.h>
 
+#include <Adafruit_NeoPixel.h>
+
 
 #define PN7150_WIRE (Wire1)
 #define PN7150_IRQ (uint8_t)(9)
@@ -20,8 +26,12 @@
 #define MAC_EEPROM_ADDR (uint8_t)(0x50)
 
 Electroniccats_PN7150 nfc(PN7150_IRQ, PN7150_VEN, PN7150_ADDR, &PN7150_WIRE);
-String getHexRepresentation(const byte* data, const uint32_t numBytes);
+String getHexRepresentation(const byte* data, const uint32_t numBytes, const char* prefix="0x", const char* separator=" ");
 void displayCardInfo();
+
+// D13 (GP8) = carrier board
+// GP14 = challenger
+Adafruit_NeoPixel neopixel(1, 8, NEO_GRB + NEO_KHZ800);
 
 
 byte mac[] = {
@@ -41,14 +51,28 @@ HttpClient http = HttpClient(ethernet, url.host(), url.port());
 IPAddress my_ip;
 
 void setup() {
+  neopixel.begin();
+  neopixel.setBrightness(50);
+
+  neopixel.clear();
+  neopixel.show();
+  delay(10);
+
+  neopixel.fill(neopixel.Color(100, 0, 0));
+  neopixel.show();
+
 
   // start serial port:
   Serial.begin(115200);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
-  Serial.print("NFCScanner ");  // TODO: Print version
-  Serial.println();
+
+  neopixel.fill(neopixel.Color(100, 50, 0));
+  neopixel.show();
+
+  Serial.print("NFCScanner ");
+  Serial.println(NFCSCANNER_VERSION);
 
   // Read MAC address from EEPROM
   Wire.begin();
@@ -99,6 +123,9 @@ void setup() {
   http.setHttpWaitForDataDelay(10);
   setTimeout(200);
 
+  neopixel.fill(neopixel.Color(100, 100, 0));
+  neopixel.show();
+
   Serial.println("Detect NFC tags with PN7150");
 
   Serial.println("Initializing...");
@@ -124,6 +151,9 @@ void setup() {
   }
   nfc.startDiscovery();  // NCI Discovery mode
   Serial.println("Waiting for an Card ...");
+
+  neopixel.fill(neopixel.Color(0, 100, 0));
+  neopixel.show();
 }
 
 enum TagValidity {
@@ -263,7 +293,12 @@ void loop() {
   //Serial.flush();
 
 
-  if (nfc.isTagDetected(5000)) {
+  // TODO: Currently waits out the timeout, fails, resets and *then* detects the tag
+  if (nfc.isTagDetected(500)) {
+    neopixel.fill(neopixel.Color(0, 0, 100));
+    neopixel.show();
+
+    tone(D5, 2093, 250);
     displayCardInfo();
 
     // It can detect multiple cards at the same time if they use the same protocol
@@ -275,16 +310,26 @@ void loop() {
     Serial.println("Remove the Card");
     nfc.waitForTagRemoval();
     Serial.println("Card removed!");
+
+    neopixel.clear();
+    neopixel.show();
+  } else {
+
+    neopixel.fill(neopixel.Color(100, 0, 0));
+    neopixel.show();
   }
 
   //Serial.println("Restarting...");
   nfc.reset();
   //Serial.println("Waiting for a Card...");
   //delay(500);
+
+  neopixel.fill(neopixel.Color(0, 100, 0));
+  neopixel.show();
 }
 
 
-String getHexRepresentation(const byte* data, const uint32_t numBytes) {
+String getHexRepresentation(const byte* data, const uint32_t numBytes, const char* prefix, const char* separator) {
   String hexString;
 
   if (numBytes == 0) {
@@ -292,26 +337,15 @@ String getHexRepresentation(const byte* data, const uint32_t numBytes) {
   }
 
   for (uint32_t szPos = 0; szPos < numBytes; szPos++) {
-    hexString += "0x";
+    hexString += prefix;
     if (data[szPos] <= 0xF)
       hexString += "0";
     hexString += String(data[szPos] & 0xFF, HEX);
     if ((numBytes > 1) && (szPos != numBytes - 1)) {
-      hexString += " ";
+      hexString += separator;
     }
   }
   return hexString;
-}
-
-const char* HEX_CHARSET = "0123456789abcdef";
-String toHex(const byte* data, const size_t len) {
-  char res[(len*2)+1] = "";
-  for (size_t i=0; i<len; i++) {
-    res[i*2] = HEX_CHARSET[(data[i] & 0xf0) >> 4];
-    res[(i*2)+1] = HEX_CHARSET[data[i] & 0x0f];;
-  }
-  res[len*2] = 0; // Null terminated
-  return String(res);
 }
 
 void displayCardInfo() {  // Funtion in charge to show the card/s in te field
@@ -348,7 +382,7 @@ void displayCardInfo() {  // Funtion in charge to show the card/s in te field
 
         Serial.print("\tNFC ID = ");
         Serial.println(getHexRepresentation(nfc.remoteDevice.getNFCID(), nfc.remoteDevice.getNFCIDLen()));
-        nfc_id = toHex(nfc.remoteDevice.getNFCID(), nfc.remoteDevice.getNFCIDLen());
+        nfc_id = getHexRepresentation(nfc.remoteDevice.getNFCID(), nfc.remoteDevice.getNFCIDLen(), "", "");
         Serial.println(nfc_id);
 
         Serial.print("\tSEL RES = ");
