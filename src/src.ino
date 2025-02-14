@@ -26,7 +26,7 @@
 #define MAC_EEPROM_ADDR (uint8_t)(0x50)
 
 Electroniccats_PN7150 nfc(PN7150_IRQ, PN7150_VEN, PN7150_ADDR, &PN7150_WIRE);
-String getHexRepresentation(const byte* data, const uint32_t numBytes);
+String getHexRepresentation(const byte* data, const uint32_t numBytes, const char* prefix="0x", const char* separator=" ");
 void displayCardInfo();
 
 // D13 (GP8) = carrier board
@@ -329,7 +329,7 @@ void loop() {
 }
 
 
-String getHexRepresentation(const byte* data, const uint32_t numBytes) {
+String getHexRepresentation(const byte* data, const uint32_t numBytes, const char* prefix, const char* separator) {
   String hexString;
 
   if (numBytes == 0) {
@@ -337,26 +337,15 @@ String getHexRepresentation(const byte* data, const uint32_t numBytes) {
   }
 
   for (uint32_t szPos = 0; szPos < numBytes; szPos++) {
-    hexString += "0x";
+    hexString += prefix;
     if (data[szPos] <= 0xF)
       hexString += "0";
     hexString += String(data[szPos] & 0xFF, HEX);
     if ((numBytes > 1) && (szPos != numBytes - 1)) {
-      hexString += " ";
+      hexString += separator;
     }
   }
   return hexString;
-}
-
-const char* HEX_CHARSET = "0123456789abcdef";
-String toHex(const byte* data, const size_t len) {
-  char res[(len*2)+1] = "";  // TODO: size needs to be known at compile time
-  for (size_t i=0; i<len; i++) {
-    res[i*2] = HEX_CHARSET[(data[i] & 0xf0) >> 4];
-    res[(i*2)+1] = HEX_CHARSET[data[i] & 0x0f];;
-  }
-  res[len*2] = 0; // Null terminated
-  return String(res);
 }
 
 void displayCardInfo() {  // Funtion in charge to show the card/s in te field
@@ -393,7 +382,7 @@ void displayCardInfo() {  // Funtion in charge to show the card/s in te field
 
         Serial.print("\tNFC ID = ");
         Serial.println(getHexRepresentation(nfc.remoteDevice.getNFCID(), nfc.remoteDevice.getNFCIDLen()));
-        nfc_id = toHex(nfc.remoteDevice.getNFCID(), nfc.remoteDevice.getNFCIDLen());
+        nfc_id = getHexRepresentation(nfc.remoteDevice.getNFCID(), nfc.remoteDevice.getNFCIDLen(), "", "");
         Serial.println(nfc_id);
 
         Serial.print("\tSEL RES = ");
