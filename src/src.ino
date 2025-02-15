@@ -1,6 +1,9 @@
 #ifndef NFCSCANNER_VERSION
-#define NFCSCANNER_VERSION "v0.0.0+unknown.manual"
+#define NFCSCANNER_VERSION "0.0.0+unknown.manual"
 #endif
+
+#define STR(s) __STR(s)
+#define __STR(s) #s
 
 #include <SPI.h>
 #include <Ethernet.h>
@@ -51,6 +54,8 @@ HttpClient http = HttpClient(ethernet, url.host(), url.port());
 IPAddress my_ip;
 
 void setup() {
+  http.kUserAgent = "NFCScanner/" STR(NFCSCANNER_VERSION);
+
   neopixel.begin();
   neopixel.setBrightness(50);
 
@@ -71,8 +76,7 @@ void setup() {
   neopixel.fill(neopixel.Color(100, 50, 0));
   neopixel.show();
 
-  Serial.print("NFCScanner ");
-  Serial.println(NFCSCANNER_VERSION);
+  Serial.println("NFCScanner v" STR(NFCSCANNER_VERSION));
 
   // Read MAC address from EEPROM
   Wire.begin();
