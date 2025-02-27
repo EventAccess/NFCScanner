@@ -5,9 +5,7 @@
 #define STR(s) __STR(s)
 #define __STR(s) #s
 
-#include <SPI.h>
-#include <Ethernet.h>
-#include <Dhcp.h>
+#define SS -1
 
 #include <ArduinoHttpClient.h>
 #include <URLParser.h>
@@ -20,16 +18,18 @@
 
 #include <Adafruit_NeoPixel.h>
 
+#include "util.h"
+#include "networking.h"
+
 
 #define PN7150_WIRE (Wire1)
 #define PN7150_IRQ (uint8_t)(9)
 #define PN7150_VEN (uint8_t)(12)
 #define PN7150_ADDR (uint8_t)(0x28)
 
-#define MAC_EEPROM_ADDR (uint8_t)(0x50)
+bool DEBUG_MODE = false;
 
 Electroniccats_PN7150 nfc(PN7150_IRQ, PN7150_VEN, PN7150_ADDR, &PN7150_WIRE);
-String getHexRepresentation(const byte* data, const uint32_t numBytes, const char* prefix="0x", const char* separator=" ");
 void displayCardInfo();
 
 // D13 (GP8) = carrier board
@@ -37,19 +37,11 @@ void displayCardInfo();
 Adafruit_NeoPixel neopixel(1, 8, NEO_GRB + NEO_KHZ800);
 
 
-byte mac[] = {
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-};
-// Set the static IP address to use if the DHCP fails to assign
-IPAddress ip(192, 168, 42, 177);
-IPAddress myDns(192, 168, 42, 1);
 
-// initialize the library instance:
-EthernetClient ethernet;
 
-auto url = ParsedUrl("http://10.79.1.0:40001/api/nfctag");
+auto url = ParsedUrl("https://eventaccess.uhx.no/api/nfctag");
 
-HttpClient http = HttpClient(ethernet, url.host(), url.port());
+HttpClient http = HttpClient(client, url.host(), url.port());
 
 IPAddress my_ip;
 
@@ -71,6 +63,8 @@ void setup() {
   Serial.begin(115200);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
+    // TODO: Should not block waiting for serial in production
+    //       Time out after a few seconds
   }
 
   neopixel.fill(neopixel.Color(100, 50, 0));
@@ -78,48 +72,8 @@ void setup() {
 
   Serial.println("NFCScanner v" STR(NFCSCANNER_VERSION));
 
-  // Read MAC address from EEPROM
-  Wire.begin();
+  networking_setup();
 
-  Wire.beginTransmission(MAC_EEPROM_ADDR);
-  Wire.write(0xFA); // EUI-48 address location
-  Wire.endTransmission(false);
-
-  Wire.requestFrom(MAC_EEPROM_ADDR, 6);
-  size_t mac_bytes_read = 0;
-  if (Wire.available() > 0) {
-    mac_bytes_read = Wire.readBytes(mac, 6);
-  }
-
-  Serial.print("MAC: ");
-  Serial.println(getHexRepresentation(mac, 6));
-
-  // You can use Ethernet.init(pin) to configure the CS pin
-  Ethernet.init(D10); // D10 challenger NFC marking == GPIO5, matches with FeatherWing Ethernet
-
-  // start the Ethernet connection:
-  Serial.println("Initialize Ethernet with DHCP:");
-  if (Ethernet.begin(mac) == 0) {
-    Serial.println("Failed to configure Ethernet using DHCP");
-    // Check for Ethernet hardware present
-    if (Ethernet.hardwareStatus() == EthernetNoHardware) {
-      Serial.println("Ethernet shield was not found.  Sorry, can't run without hardware. :(");
-      while (true) {
-        delay(1); // do nothing, no point running without Ethernet hardware
-      }
-    }
-    if (Ethernet.linkStatus() == LinkOFF) {
-      Serial.println("Ethernet cable is not connected.");
-    }
-    // try to configure using IP address instead of DHCP:
-    Ethernet.begin(mac, ip, myDns);
-    Serial.print("My IP address: ");
-    Serial.println(Ethernet.localIP());
-  } else {
-    Serial.print("  DHCP assigned IP ");
-    my_ip = Ethernet.localIP();
-    Serial.println(my_ip);
-  }
   // give the Ethernet shield a second to initialize:
   delay(1000);
   Serial.println();
@@ -172,10 +126,11 @@ TagValidity checkTag(const char* tag_id);
 TagValidity checkTag(const char* tag_id) {
   /* Attempting to perform a HTTP request while link is disconnected causes a 60s delay
   */
-  if (Ethernet.linkStatus() == EthernetLinkStatus::LinkOFF) {
-    Serial.println("Error: Ethernet cable not connected");
-    return TagValidity::ERROR;
-  }
+  // TODO: Reimplement
+  //if (Ethernet.linkStatus() == EthernetLinkStatus::LinkOFF) {
+  //  Serial.println("Error: Ethernet cable not connected");
+  //  return TagValidity::ERROR;
+  //}
 
   String nfc_url = url.path();
   nfc_url += "/";
@@ -212,13 +167,26 @@ TagValidity checkTag(const char* tag_id) {
 
   if (doc["valid"].is<bool>()) {
     if (doc["valid"].as<bool>()) {
+      tone(D5, 2093, 250);
       Serial.println("Valid tag!");
       return TagValidity::VALID;
     } else {
+      tone(D5, 523, 100);
+      delay(150);
+      tone(D5, 523, 100);
+      delay(150);
       Serial.println("Invalid tag!!!");
       return TagValidity::INVALID;
     }
   } else {
+    tone(D5, 523, 100);
+    delay(150);
+    tone(D5, 523, 100);
+    delay(150);
+    tone(D5, 523, 100);
+    delay(150);
+    tone(D5, 523, 100);
+    Serial.println("Invalid tag!!!");
     Serial.println("Key valid either isn't bool or does not exist.");
   }
 
@@ -227,62 +195,18 @@ TagValidity checkTag(const char* tag_id) {
   return TagValidity::ERROR;
 }
 
-
-void ethernet_maintain() {
-  IPAddress current_ip;
-  switch (Ethernet.maintain())
-  {
-  case DHCP_CHECK_REBIND_OK:
-  case DHCP_CHECK_RENEW_OK:
-    Serial.println("DHCP refreshed OK");
-    current_ip = Ethernet.localIP();
-    if (current_ip != my_ip) {
-      Serial.print("IP changed to: ");
-      Serial.println(current_ip);
-      my_ip = current_ip;
-    }
-    break;
-  case DHCP_CHECK_REBIND_FAIL:
-    Serial.println("DHCP Rebind failed");
-    break;
-  case DHCP_CHECK_RENEW_FAIL:
-    Serial.println("DHCP Renew failed");
-    break;
-
-  case DHCP_CHECK_NONE:
-  default:
-    break;
-  }
-}
-
 void setTimeout(uint16_t timeout) {
-  ethernet.setTimeout(timeout);
-  ethernet.setConnectionTimeout(timeout);
+  //ethernet.setTimeout(timeout);
+  //ethernet.setConnectionTimeout(timeout);
   http.setTimeout(timeout);
 
   http.setHttpResponseTimeout(2*timeout);
 }
 
 void loop() {
-  ethernet_maintain();
+  //ethernet_maintain();
+  networking_loop();
 
-  EthernetLinkStatus link_status = Ethernet.linkStatus();
-  Serial.print("Link status: ");
-  Serial.println(link_status);
-
-  uint8_t socket_status = ethernet.status();
-  Serial.print("Socket status: ");
-  Serial.println(socket_status);
-
-  Serial.print("Socket number: ");
-  Serial.println(ethernet.getSocketNumber());
-
-  Serial.print("Local port: ");
-  Serial.println(ethernet.localPort());
-  Serial.print("Remote: ");
-  Serial.print(ethernet.remoteIP());
-  Serial.print(":");
-  Serial.println(ethernet.remotePort());
 
   //Serial.print("HTTP Remote: ");
   //Serial.print(http.iServerAddress);
@@ -302,7 +226,6 @@ void loop() {
     neopixel.fill(neopixel.Color(0, 0, 100));
     neopixel.show();
 
-    tone(D5, 2093, 250);
     displayCardInfo();
 
     // It can detect multiple cards at the same time if they use the same protocol
@@ -330,26 +253,6 @@ void loop() {
 
   neopixel.fill(neopixel.Color(0, 100, 0));
   neopixel.show();
-}
-
-
-String getHexRepresentation(const byte* data, const uint32_t numBytes, const char* prefix, const char* separator) {
-  String hexString;
-
-  if (numBytes == 0) {
-    hexString = "null";
-  }
-
-  for (uint32_t szPos = 0; szPos < numBytes; szPos++) {
-    hexString += prefix;
-    if (data[szPos] <= 0xF)
-      hexString += "0";
-    hexString += String(data[szPos] & 0xFF, HEX);
-    if ((numBytes > 1) && (szPos != numBytes - 1)) {
-      hexString += separator;
-    }
-  }
-  return hexString;
 }
 
 void displayCardInfo() {  // Funtion in charge to show the card/s in te field

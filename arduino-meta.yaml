@@ -30,6 +30,10 @@ libraries:
     source: arduino
     version: "1.12.4"
 
+  - name: SSLClient
+    source: arduino
+    version: "1.6.11"
+
 
 cores:
   - id: rp2040:rp2040
