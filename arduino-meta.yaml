@@ -28,7 +28,7 @@ libraries:
 
   - name: Adafruit NeoPixel
     source: arduino
-    version: "1.12.4"
+    version: "1.12.5"
 
 
 cores:
