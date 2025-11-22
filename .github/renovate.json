@@ -6,8 +6,8 @@
 	"customManagers": [
 		{
 			"customType": "regex",
-			"fileMatch": [
-				"^\\.tools/tools\\.yaml$"
+			"managerFilePatterns": [
+				"/^\\.tools/tools\\.yaml$/"
 			],
 			"matchStringsStrategy": "recursive",
 			"matchStrings": [
@@ -18,8 +18,8 @@
 		{
 			"customType": "regex",
 			"description": "Arduino library dependencies from the Arduino library manager",
-			"fileMatch": [
-				"(^|/)arduino-meta\\.yaml$"
+			"managerFilePatterns": [
+				"/(^|/)arduino-meta\\.yaml$/"
 			],
 			"matchStringsStrategy": "recursive",
 			"matchStrings": [
@@ -31,8 +31,8 @@
 		{
 			"customType": "regex",
 			"description": "Arduino library dependencies from git (branch with commit)",
-			"fileMatch": [
-				"(^|/)arduino-meta\\.yaml$"
+			"managerFilePatterns": [
+				"/(^|/)arduino-meta\\.yaml$/"
 			],
 			"matchStringsStrategy": "recursive",
 			"matchStrings": [
@@ -45,8 +45,8 @@
 		{
 			"customType": "regex",
 			"description": "Arduino package dependencies from the Arduino boards manager",
-			"fileMatch": [
-				"(^|/)arduino-meta\\.yaml$"
+			"managerFilePatterns": [
+				"/(^|/)arduino-meta\\.yaml$/"
 			],
 			"matchStringsStrategy": "recursive",
 			"matchStrings": [
