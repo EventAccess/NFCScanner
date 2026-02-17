@@ -16,7 +16,7 @@ libraries:
 
   - name: Electronic Cats PN7150
     source: arduino
-    version: "2.1.0"
+    version: "3.1.1"
 
   - name: ArduinoHttpClient
     source: arduino
